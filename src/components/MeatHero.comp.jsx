@@ -1,8 +1,8 @@
 const MeatHero = () => {
     return (
-        <section className="hero">
+        <section className="hero" id="meatHero">
 			<div>
-				<h1>Our Quality Meats won't let you down</h1>
+				<h1>Our Quality Cuts Won't Let You Down</h1>
 				<p className="subtitle">Explore the benefits of choosing natural, farm-to-table meat</p>
 			</div>
             <button>Explore Meats</button>

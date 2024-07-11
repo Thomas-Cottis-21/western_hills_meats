@@ -1,6 +1,6 @@
 const TopBar = () => {
     return (
-        <div id="topbar">
+        <div id="topBar">
             <p>This is the topbar</p>
         </div>
     );

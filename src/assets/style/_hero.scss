@@ -1,16 +1,16 @@
 #main-hero {
-    background-image: url(../pexels-lureofadventure-16739692.jpg);
+    background-image: url(../pexels-askar-abayev-5638751-edited.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom center;
     background-color: $secondary;
-    padding: 170px 0px;
+    padding: 190px 0px;
 
     .main-hero-content {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        padding: 0px 0px 0px 65px;
+        align-items: start;
         color: $light;
     }
 }
