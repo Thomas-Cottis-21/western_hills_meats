@@ -1,8 +1,8 @@
 const TopBar = () => {
     return (
-        <>
-            <p>This is the top data</p>
-        </>
+        <div id="topbar">
+            <p>This is the topbar</p>
+        </div>
     );
 }
 

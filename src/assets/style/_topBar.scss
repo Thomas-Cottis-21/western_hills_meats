@@ -1,0 +1,12 @@
+#topbar {
+    display: flex;
+    justify-content: center;
+    background-color: $primary;
+    color: $light;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 0px;
+    margin: 0px;
+}
