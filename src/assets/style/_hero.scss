@@ -1,10 +1,16 @@
 #hero {
+    background-image: url(../pexels-lureofadventure-16739692.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    background-color: $secondary;
+    padding: 200px 0px;
 
     .hero-content {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 100lvh;
+        color: $light;
     }
 }
