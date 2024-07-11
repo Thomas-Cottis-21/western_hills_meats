@@ -1,8 +1,13 @@
 const Hero = () => {
     return (
-        <>
-            <h1>THIS IS THE HERO</h1>
-        </>
+        <div id="hero">
+            <div className="hero-content">
+                <h1>Hero Title</h1>
+                <p className="subtitle">
+                    Hero subtitle
+                </p>
+            </div>
+        </div>
     );
 }
 
