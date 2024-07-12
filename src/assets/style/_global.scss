@@ -10,9 +10,12 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
     font-size: $title;
 }
+h2 {
+    font-size: $title-sm;
+}
 p {
     font-family: $content;
-    margin: 5px;
+    margin: 5px 0px;
 }
 p.subtitle {
     font-size: $subtitle;
@@ -20,4 +23,15 @@ p.subtitle {
     span {
         color: $primary;
     }
+}
+button {
+    background-color: $primary;
+    color: $light;
+    border: none;
+    font-family: $content;
+    font-size: $button;
+    padding: 5px;
+}
+button:hover {
+    cursor: pointer;
 }
