@@ -4,17 +4,18 @@
     background-size: cover;
     background-position: bottom center;
     background-color: $secondary;
-    padding: 190px 0px;
+    padding: 225px 0px;
 
     .main-hero-content {
         display: flex;
         flex-direction: column;
-        padding: 0px 0px 0px 65px;
-        align-items: start;
+        align-items: center;
+        text-align: center;
         color: $light;
     }
 }
 
 .hero {
+    background-color: $light;
     padding: 100px;
 }
