@@ -1,6 +1,6 @@
 #condimentHero {
-    background-color: $dark;
-    color: $light;
+    background-color: $light;
+    color: $dark;
 
     div {
         position: relative;
@@ -15,7 +15,7 @@
         top: 25%;
         left: 50%;
         transform: translate(-50%);
-        z-index: -1;
+        z-index: -100;
         opacity: .9;
     }
 }

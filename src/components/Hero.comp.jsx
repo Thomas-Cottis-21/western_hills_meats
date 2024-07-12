@@ -1,7 +1,7 @@
 const Hero = () => {
     return (
-			<div id="main-hero">
-				<div className="main-hero-content">
+			<div id="hero">
+				<div className="hero-content">
 					<h1>Premium Cuts, Farm Fresh</h1>
 					<p className="subtitle">
 						Host your next family gathering with

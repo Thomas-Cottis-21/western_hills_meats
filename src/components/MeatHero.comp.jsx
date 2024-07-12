@@ -4,8 +4,8 @@ const MeatHero = () => {
 			<div>
 				<h1>Our Quality Cuts Won't Let You Down</h1>
 				<p className="subtitle">Explore the benefits of choosing natural, farm-to-table meat</p>
+            	<button>Explore Meats</button>
 			</div>
-            <button>Explore Meats</button>
         </section>
 		);
 }

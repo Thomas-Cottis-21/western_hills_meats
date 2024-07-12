@@ -1,4 +1,4 @@
-import explosion from "../assets/explosion.png";
+import explosion2 from "../assets/explosion2.png";
 
 const CondimentHero = () => {
     return (
@@ -10,8 +10,8 @@ const CondimentHero = () => {
                 <p className="subtitle">
                     Check out the name brand condiments and spices that we have in stock!
                 </p>
-                <button>Explore Spices and Condiments</button>
-                <img src={explosion}/>
+                <button>Explore Spices</button>
+                <img src={explosion2}/>
             </div>
         </section>
     );

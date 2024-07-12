@@ -1,4 +1,4 @@
-#main-hero {
+#hero {
     background-image: url(../pexels-askar-abayev-5638751-edited.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -6,16 +6,11 @@
     background-color: $secondary;
     padding: 225px 0px;
 
-    .main-hero-content {
+    .hero-content {
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
         color: $light;
     }
-}
-
-.hero {
-    background-color: $light;
-    padding: 100px 0px;
 }
