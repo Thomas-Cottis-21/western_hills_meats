@@ -1,9 +1,16 @@
 const SmokerHero = () => {
     return (
-        <>
-            <h1>THIS IS THE SMOKER HERO</h1>
-        </>
-    );
+			<section id="smokerHero">
+				<h1 className="title">
+					Grill more with <span className="">Western Hills Meats</span>
+				</h1>
+				<p className="subtitle">
+					We supply all the best tools to get you started and to keep you
+					going
+				</p>
+				<button>Explore Grills & Smokers</button>
+			</section>
+		);
 }
 
 export default SmokerHero;
