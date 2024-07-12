@@ -1,0 +1,21 @@
+#condimentHero {
+    background-color: $dark;
+    color: $light;
+
+    div {
+        position: relative;
+        text-align: center;
+        z-index: 1;
+        padding: 200px 0;
+    }
+
+    img {
+        width: 400px;
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        transform: translate(-50%);
+        z-index: -1;
+        opacity: .9;
+    }
+}
