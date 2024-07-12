@@ -1,0 +1,30 @@
+.heroCard {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    width: 90%;
+
+    div {
+        flex: 1;
+        padding: 50px 0;
+    }
+
+    div.image {
+        background-image: url(../pexels-rdne-8522719.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    div.content {
+        background-color: $dark;
+        color: $light;
+        padding: 20px;
+    }
+}
+
+@media (min-width: 760px) {
+    .heroCard {
+        flex-direction: row;
+        width: 65%;
+    }
+}

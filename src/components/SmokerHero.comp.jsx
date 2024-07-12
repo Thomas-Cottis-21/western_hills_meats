@@ -1,3 +1,5 @@
+import HeroCard from "./HeroCard.comp.jsx";
+
 const SmokerHero = () => {
     return (
 			<section id="smokerHero">
@@ -9,6 +11,7 @@ const SmokerHero = () => {
 					going
 				</p>
 				<button>Explore Grills & Smokers</button>
+                <HeroCard />
 			</section>
 		);
 }
