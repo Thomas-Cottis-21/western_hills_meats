@@ -1,17 +1,24 @@
 import ImageGrid from "./ImageGrid.comp";
+import traeger from "../assets/traegerLogo.svg";
+import gozney from "../assets/gozneyLogo.svg";
+import yoder from "../assets/yoderLogo.png";
+import ooni from "../assets/ooniLogo.svg";
 
 const SmokerHero = () => {
+
+	const imagesArray = [traeger, gozney, yoder, ooni];
+
     return (
 			<section id="smokerHero">
 				<h1 className="title">
-					Grill more with <span className="">Western Hills Meats</span>
+					Grill more with <span>Western Hills Meats</span>
 				</h1>
 				<p className="subtitle">
-					We supply all the best tools to get you started and to keep you
-					going
+					We supply the best brands at the lowest prices
 				</p>
-				<p className="subtitle">You're sure to find the best grills & smokers from all the greatest brands with us</p>
-				<ImageGrid />
+
+				<ImageGrid images={imagesArray}/>
+
 				<button>Explore Grills & Smokers</button>
 			</section>
 		);

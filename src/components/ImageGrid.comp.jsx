@@ -1,37 +1,12 @@
-import traeger from "../assets/traegerLogo.svg";
-
-const ImageGrid = (images) => {
-
-    const generateGridChildren = () => {
-        
-    }
+const ImageGrid = ({images}) => {
 
     return (
         <div className="imageGridContainer">
-            <div className="imageGridChild">
-                <img
-                src={traeger}/>
-            </div>
-            <div className="imageGridChild">
-                <img
-                src={traeger}/>
-            </div>
-            <div className="imageGridChild">
-                <img
-                src={traeger}/>
-            </div>
-            <div className="imageGridChild">
-                <img
-                src={traeger}/>
-            </div>
-            <div className="imageGridChild">
-                <img
-                src={traeger}/>
-            </div>
-            <div className="imageGridChild">
-                <img
-                src={traeger}/>
-            </div>
+            {images.map((image, index) => (
+                <div key={index} className="imageGridChild">
+                    <img src={image}/>
+                </div>
+            ))}
         </div>
     );
 }

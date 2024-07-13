@@ -1,12 +1,14 @@
 .imageGridContainer {
     display: grid;
     grid-template-columns: 1;
-    grid-gap: 10px;
+    grid-gap: 50px;
+    margin: 30px;
 
     .imageGridChild {
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
 
         img {
             width: 100%;
