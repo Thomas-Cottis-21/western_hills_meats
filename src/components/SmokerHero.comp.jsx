@@ -1,3 +1,5 @@
+import ImageGrid from "./ImageGrid.comp";
+
 const SmokerHero = () => {
     return (
 			<section id="smokerHero">
@@ -9,7 +11,7 @@ const SmokerHero = () => {
 					going
 				</p>
 				<p className="subtitle">You're sure to find the best grills & smokers from all the greatest brands with us</p>
-				
+				<ImageGrid />
 				<button>Explore Grills & Smokers</button>
 			</section>
 		);
