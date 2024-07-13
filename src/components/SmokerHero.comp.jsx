@@ -1,5 +1,3 @@
-import HeroCard from "./HeroCard.comp.jsx";
-
 const SmokerHero = () => {
     return (
 			<section id="smokerHero">
@@ -10,8 +8,9 @@ const SmokerHero = () => {
 					We supply all the best tools to get you started and to keep you
 					going
 				</p>
+				<p className="subtitle">You're sure to find the best grills & smokers from all the greatest brands with us</p>
+				
 				<button>Explore Grills & Smokers</button>
-                <HeroCard />
 			</section>
 		);
 }
