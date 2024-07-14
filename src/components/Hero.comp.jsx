@@ -4,8 +4,7 @@ const Hero = () => {
 				<div className="hero-content">
 					<h1>Premium Cuts, Farm Fresh</h1>
 					<p className="subtitle">
-						Host your next family gathering with
-						<span>Western Hills Quality Meats</span>
+						Your local source for <span>premium meats</span>
 					</p>
 				</div>
 			</div>

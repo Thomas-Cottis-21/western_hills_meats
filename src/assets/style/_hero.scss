@@ -1,5 +1,5 @@
 #hero {
-    background-image: url(../images/pexels-askar-abayev-5638751-edited.jpg);
+    background-image: url(../images/fireVertEdited.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom center;
@@ -12,5 +12,10 @@
         align-items: center;
         text-align: center;
         color: $light;
+    }
+}
+@media (min-width: 768px) {
+    #hero {
+        background-image: url("../images/fireHor.jpg");
     }
 }
