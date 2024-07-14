@@ -4,7 +4,7 @@ const Email = (props) => {
             type="email"
             name="email"
             id="email"
-            placeholder="email"
+            placeholder="Email"
             value={props.userInputKey}
         />
     );

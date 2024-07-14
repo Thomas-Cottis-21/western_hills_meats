@@ -12,6 +12,9 @@ const Contact = () => {
                 <Email />
                 <Message />
             </form>
+            <div className="formControl">
+                <button>Send</button>
+            </div>
         </section>
     );
 }

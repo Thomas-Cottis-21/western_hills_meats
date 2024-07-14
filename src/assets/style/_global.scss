@@ -44,3 +44,24 @@ button:hover {
     border-radius: 5px;
     color: $dark;
 }
+.formControl {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+input, textarea, select {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    background: transparent;
+    border: 2px solid $light;
+    border-radius: 8px;
+    font-family: $content;
+    font-size: $input;
+    outline: none;
+    color: $light;
+}
+textarea {
+    height: 300px;
+}

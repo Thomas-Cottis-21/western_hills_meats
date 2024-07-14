@@ -1,4 +1,4 @@
-import explosion2 from "../assets/explosion2.png";
+import explosion2 from "../assets/images/explosion2.png";
 
 const CondimentHero = () => {
     return (

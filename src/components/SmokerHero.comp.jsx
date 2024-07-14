@@ -1,8 +1,8 @@
 import ImageGrid from "./ImageGrid.comp";
-import traeger from "../assets/traegerLogo.svg";
-import gozney from "../assets/gozneyLogo.svg";
-import yoder from "../assets/yoderLogo.png";
-import ooni from "../assets/ooniLogo.svg";
+import traeger from "../assets/images/traegerLogo.svg";
+import gozney from "../assets/images/gozneyLogo.svg";
+import yoder from "../assets/images/yoderLogo.png";
+import ooni from "../assets/images/ooniLogo.svg";
 
 const SmokerHero = () => {
 
