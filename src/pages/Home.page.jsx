@@ -5,6 +5,7 @@ import Hero from "../components/Hero.comp.jsx";
 import MeatHero from "../components/MeatHero.comp.jsx";
 import SmokerHero from "../components/SmokerHero.comp.jsx";
 import TopBar from "../components/TopBar.comp.jsx";
+import Vendor from "../components/Vendor.comp.jsx";
 
 const Home = () => {
     return (
@@ -12,6 +13,7 @@ const Home = () => {
             <TopBar/>
             <Hero/>
             <MeatHero/>
+            <Vendor />
             <CallToAction/>
             <CondimentHero/>
             <SmokerHero/>
