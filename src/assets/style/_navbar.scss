@@ -1,11 +1,10 @@
 #navbar {
     position: fixed;
     top: 30px;
-    /* background-color: transparent;
-    color: $light; */
-    backdrop-filter: blur(20px);
+    color: $light;
+    transition: all ease-in-out .3s;
 
-    /* .navbar-brand, .nav-link {
+    .navbar-brand, .nav-link {
         color: $light;
-    } */
+    }
 }
