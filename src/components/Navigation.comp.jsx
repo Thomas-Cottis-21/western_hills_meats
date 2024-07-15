@@ -42,7 +42,7 @@ const Navigation = () => {
 
     return (
 			<Navbar ref={navbarRef} expand="md" data-bs-theme="dark" fixed="top" id="navbar" style={{ backdropFilter: backdropFilter }}>
-				<NavbarBrand>Western Hills Meats</NavbarBrand>
+				<NavbarBrand>Western Hills Quality Meats</NavbarBrand>
 				<NavbarToggle aria-controls="basic-navbar-nav" />
 				<NavbarCollapse id="basic-navbar-nav">
 					<Nav className="ml-auto">
