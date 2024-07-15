@@ -7,11 +7,13 @@ import SmokerHero from "../components/SmokerHero.comp.jsx";
 import TopBar from "../components/TopBar.comp.jsx";
 import Vendor from "../components/Vendor.comp.jsx";
 import Location from "../components/Location.comp.jsx";
+import Navigation from "../components/Navigation.comp.jsx";
 
 const Home = () => {
     return (
         <>
             <TopBar/>
+            <Navigation />
             <Hero/>
             <MeatHero/>
             <Vendor />

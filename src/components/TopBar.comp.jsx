@@ -1,7 +1,7 @@
 const TopBar = () => {
     return (
         <div id="topBar">
-            <p>This is the topbar</p>
+            <p className="topbar">This is the topbar</p>
         </div>
     );
 }
