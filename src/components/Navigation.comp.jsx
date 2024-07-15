@@ -47,11 +47,64 @@ const Navigation = () => {
 				<NavbarCollapse id="basic-navbar-nav">
 					<Nav className="ml-auto">
 						<NavLink>Home</NavLink>
-						<NavLink>Link</NavLink>
-						<NavDropdown id="basic-nav-dropdown"
-                        title="Dropdown">
-							<NavDropdown.Item>Action</NavDropdown.Item>
+						<NavLink>Inventory</NavLink>
+						<NavDropdown title="Meats">
+							<NavDropdown.Item>
+                                Beef
+                            </NavDropdown.Item>
+                            <NavDropdown.Item>
+                                Pork
+                            </NavDropdown.Item>
+                            <NavDropdown.Item>
+                                Chicken
+                            </NavDropdown.Item>
+                            <NavDropdown.Item>
+                                Lamb
+                            </NavDropdown.Item>
+                            <NavDropdown.Item>
+                                Turkey
+                            </NavDropdown.Item>
+                            <NavDropdown.Item>
+                                Seafood
+                            </NavDropdown.Item>
+                            <NavDropdown.Item>
+                                All Meat Inventory
+                            </NavDropdown.Item>
 						</NavDropdown>
+                        <NavDropdown title="Spices">
+                            <NavDropdown.Item>
+                                Rubs
+                            </NavDropdown.Item>
+                            <NavDropdown.Item>
+                                Sauces
+                            </NavDropdown.Item>
+                            <NavDropdown.Item>
+                                Marinades
+                            </NavDropdown.Item>
+                            <NavDropdown.Item>
+                                All Spice Inventory
+                            </NavDropdown.Item>
+                        </NavDropdown>
+                        <NavDropdown title="Grills & Smokers">
+                            <NavDropdown.Item>
+                                Accessories
+                            </NavDropdown.Item>
+                            <NavDropdown.Item>
+                                Thermometers
+                            </NavDropdown.Item>
+                            <NavDropdown.Item>
+                                Pellets
+                            </NavDropdown.Item>
+                            <NavDropdown.Item>
+                                Grills
+                            </NavDropdown.Item>
+                            <NavDropdown.Item>
+                                Smokers
+                            </NavDropdown.Item>
+                            <NavDropdown.Item>
+                                All Grills & Smoker Inventory
+                            </NavDropdown.Item>
+                        </NavDropdown>
                         <NavbarText>Scroll Y: {scrollY}</NavbarText>
                         <NavbarText>Effect Value: {effectValue}</NavbarText>
 					</Nav>
