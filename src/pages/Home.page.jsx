@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import CallToAction from "../components/CallToAction.comp.jsx";
 import CondimentHero from "../components/CondimentHero.comp.jsx";
 import Contact from "../components/Contact.comp.jsx";
