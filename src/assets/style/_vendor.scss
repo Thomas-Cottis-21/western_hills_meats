@@ -4,6 +4,10 @@
     background-size: cover;
     background-position: center;
     padding: 180px $sidePadding;
-
     color: $light;
+}
+@media (min-width: 768px) {
+    .vendor {
+        padding: 300px;
+    }
 }
