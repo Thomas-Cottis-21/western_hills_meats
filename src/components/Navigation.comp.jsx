@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { Navbar, Nav, NavbarBrand, NavDropdown, NavbarCollapse, NavLink, NavbarToggle, NavbarText } from "react-bootstrap";
 import { accessData } from "../context/DataContext.context";
 import { getInventoryCount, getProductCountByCategory, getProductCountBySubcategory } from "../util/filterData.util";
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
     const [scrollY, setScrollY] = useState(0);
@@ -44,16 +45,22 @@ const Navigation = () => {
         }
     }, [effectValue]);
 
-    const formatSubcategoryLink = (data, linkName) => {
-        return `${linkName} (${getProductCountBySubcategory(data, linkName)})`;
+    const formatSubcategoryLink = (data, category, subcategory) => {
+        return <Link to={`/inventory/${category}/${subcategory}`}>
+            {subcategory} ({getProductCountBySubcategory(data, subcategory)})
+        </Link>
     }
 
     const formatCategoryLink = (data, category, linkName) => {
-        return `${linkName} (${getProductCountByCategory(data, category)})`;
+        return <Link>
+            {linkName} ({getProductCountByCategory(data, category)})
+        </Link>
     }
 
     const formatInventoryLink = (data, linkName) => {
-        return `${linkName} (${getInventoryCount(data)})`;
+        return <Link>
+            {linkName} ({getInventoryCount(data)})
+        </Link>
     }
 
     return (
@@ -66,22 +73,22 @@ const Navigation = () => {
 						<NavLink>{formatInventoryLink(data, "Inventory")}</NavLink>
 						<NavDropdown title="Meats">
 							<NavDropdown.Item>
-                                {formatSubcategoryLink(data, "Beef")}
+                                {formatSubcategoryLink(data, "Meats", "Beef")}
                             </NavDropdown.Item>
                             <NavDropdown.Item>
-                                {formatSubcategoryLink(data, "Pork")}
+                                {formatSubcategoryLink(data, "Meats", "Pork")}
                             </NavDropdown.Item>
                             <NavDropdown.Item>
-                                {formatSubcategoryLink(data, "Chicken")}
+                                {formatSubcategoryLink(data, "Meats", "Chicken")}
                             </NavDropdown.Item>
                             <NavDropdown.Item>
-                                {formatSubcategoryLink(data, "Lamb")}
+                                {formatSubcategoryLink(data, "Meats", "Lamb")}
                             </NavDropdown.Item>
                             <NavDropdown.Item>
-                                {formatSubcategoryLink(data, "Turkey")}
+                                {formatSubcategoryLink(data, "Meats", "Turkey")}
                             </NavDropdown.Item>
                             <NavDropdown.Item>
-                                {formatSubcategoryLink(data, "Seafood")}
+                                {formatSubcategoryLink(data, "Meats", "Seafood")}
                             </NavDropdown.Item>
                             <NavDropdown.Item>
                                 {formatCategoryLink(data, "Meats", "All Meat Inventory")}
@@ -89,13 +96,13 @@ const Navigation = () => {
 						</NavDropdown>
                         <NavDropdown title="Spices">
                             <NavDropdown.Item>
-                                {formatSubcategoryLink(data, "Rubs")}
+                                {formatSubcategoryLink(data, "Condiments", "Rubs")}
                             </NavDropdown.Item>
                             <NavDropdown.Item>
-                                {formatSubcategoryLink(data, "Sauces")}
+                                {formatSubcategoryLink(data, "Condiments", "Sauces")}
                             </NavDropdown.Item>
                             <NavDropdown.Item>
-                                {formatSubcategoryLink(data, "Marinades")}
+                                {formatSubcategoryLink(data, "Condiments", "Marinades")}
                             </NavDropdown.Item>
                             <NavDropdown.Item>
                                 {formatCategoryLink(data, "Condiments", "All Spice Inventory")}
@@ -103,19 +110,19 @@ const Navigation = () => {
                         </NavDropdown>
                         <NavDropdown title="Grills & Smokers">
                             <NavDropdown.Item>
-                                {formatSubcategoryLink(data, "Accessories")}
+                                {formatSubcategoryLink(data, "Smokers", "Accessories")}
                             </NavDropdown.Item>
                             <NavDropdown.Item>
-                                {formatSubcategoryLink(data, "Thermometers")}
+                                {formatSubcategoryLink(data, "Smokers", "Thermometers")}
                             </NavDropdown.Item>
                             <NavDropdown.Item>
-                                {formatSubcategoryLink(data, "Pellets")}
+                                {formatSubcategoryLink(data, "Smokers", "Pellets")}
                             </NavDropdown.Item>
                             <NavDropdown.Item>
-                                {formatSubcategoryLink(data, "Grills")}
+                                {formatSubcategoryLink(data, "Smokers", "Grills")}
                             </NavDropdown.Item>
                             <NavDropdown.Item>
-                                {formatSubcategoryLink(data, "Smokers")}
+                                {formatSubcategoryLink(data, "Smokers", "Smokers")}
                             </NavDropdown.Item>
                             <NavDropdown.Item>
                                 {formatCategoryLink(data, "Smokers", "All Smoker & Grill Inventory")}
