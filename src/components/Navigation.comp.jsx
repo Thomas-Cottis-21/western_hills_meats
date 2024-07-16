@@ -58,7 +58,7 @@ const Navigation = () => {
     }
 
     const formatInventoryLink = (data, linkName) => {
-        return <Link>
+        return <Link to={"/inventory"}>
             {linkName} ({getInventoryCount(data)})
         </Link>
     }
