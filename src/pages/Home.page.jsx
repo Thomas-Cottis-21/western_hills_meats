@@ -8,17 +8,11 @@ import TopBar from "../components/TopBar.comp.jsx";
 import Vendor from "../components/Vendor.comp.jsx";
 import Location from "../components/Location.comp.jsx";
 import Navigation from "../components/Navigation.comp.jsx";
-import { useEffect } from "react";
-import getProducts from "../util/getProducts.util.js";
+import { accessData } from "../context/DataContext.context.jsx";
 
 const Home = () => {
 
-    useEffect(() => {
-        (async () => {
-            const products = await getProducts();
-            console.log(products);
-        })();
-    }, []);
+    const { data, setData } = accessData();
 
     return (
         <>
