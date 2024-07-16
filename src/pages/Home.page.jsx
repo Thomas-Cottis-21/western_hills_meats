@@ -15,7 +15,7 @@ const Home = () => {
 
     useEffect(() => {
         (async () => {
-            const products = getProducts();
+            const products = await getProducts();
             console.log(products);
         })();
     }, []);
