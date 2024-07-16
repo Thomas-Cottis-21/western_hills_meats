@@ -17,7 +17,7 @@ const App = () => {
   }, []);
 
   const handleAddProductData = (products) => {
-    setData([...data, products]);
+    setData(products);
     console.log("Product data added to context");
   };
 

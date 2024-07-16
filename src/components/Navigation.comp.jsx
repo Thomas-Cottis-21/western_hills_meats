@@ -1,11 +1,15 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Navbar, Nav, NavbarBrand, NavDropdown, NavbarCollapse, NavLink, NavbarToggle, NavbarText } from "react-bootstrap";
+import { accessData } from "../context/DataContext.context";
+import { getInventoryCount, getProductCountByCategory, getProductCountBySubcategory } from "../util/filterData.util";
 
 const Navigation = () => {
     const [scrollY, setScrollY] = useState(0);
     const [effectValue, setEffectValue] = useState(0);
     const [backdropFilter, setBackdropFilter] = useState("");
     const navbarRef = useRef(null);
+
+    const { data, setData } = accessData();
 
     useEffect(() => {
         window.addEventListener("scroll", handleScroll);
@@ -40,6 +44,18 @@ const Navigation = () => {
         }
     }, [effectValue]);
 
+    const formatSubcategoryLink = (data, linkName) => {
+        return `${linkName} (${getProductCountBySubcategory(data, linkName)})`;
+    }
+
+    const formatCategoryLink = (data, category, linkName) => {
+        return `${linkName} (${getProductCountByCategory(data, category)})`;
+    }
+
+    const formatInventoryLink = (data, linkName) => {
+        return `${linkName} (${getInventoryCount(data)})`;
+    }
+
     return (
 			<Navbar ref={navbarRef} expand="md" data-bs-theme="dark" fixed="top" id="navbar" style={{ backdropFilter: backdropFilter }}>
 				<NavbarBrand>Western Hills Quality Meats</NavbarBrand>
@@ -47,62 +63,62 @@ const Navigation = () => {
 				<NavbarCollapse id="basic-navbar-nav">
 					<Nav className="ml-auto">
 						<NavLink>Home</NavLink>
-						<NavLink>Inventory</NavLink>
+						<NavLink>{formatInventoryLink(data, "Inventory")}</NavLink>
 						<NavDropdown title="Meats">
 							<NavDropdown.Item>
-                                Beef
+                                {formatSubcategoryLink(data, "Beef")}
                             </NavDropdown.Item>
                             <NavDropdown.Item>
-                                Pork
+                                {formatSubcategoryLink(data, "Pork")}
                             </NavDropdown.Item>
                             <NavDropdown.Item>
-                                Chicken
+                                {formatSubcategoryLink(data, "Chicken")}
                             </NavDropdown.Item>
                             <NavDropdown.Item>
-                                Lamb
+                                {formatSubcategoryLink(data, "Lamb")}
                             </NavDropdown.Item>
                             <NavDropdown.Item>
-                                Turkey
+                                {formatSubcategoryLink(data, "Turkey")}
                             </NavDropdown.Item>
                             <NavDropdown.Item>
-                                Seafood
+                                {formatSubcategoryLink(data, "Seafood")}
                             </NavDropdown.Item>
                             <NavDropdown.Item>
-                                All Meat Inventory
+                                {formatCategoryLink(data, "Meats", "All Meat Inventory")}
                             </NavDropdown.Item>
 						</NavDropdown>
                         <NavDropdown title="Spices">
                             <NavDropdown.Item>
-                                Rubs
+                                {formatSubcategoryLink(data, "Rubs")}
                             </NavDropdown.Item>
                             <NavDropdown.Item>
-                                Sauces
+                                {formatSubcategoryLink(data, "Sauces")}
                             </NavDropdown.Item>
                             <NavDropdown.Item>
-                                Marinades
+                                {formatSubcategoryLink(data, "Marinades")}
                             </NavDropdown.Item>
                             <NavDropdown.Item>
-                                All Spice Inventory
+                                {formatCategoryLink(data, "Condiments", "All Spice Inventory")}
                             </NavDropdown.Item>
                         </NavDropdown>
                         <NavDropdown title="Grills & Smokers">
                             <NavDropdown.Item>
-                                Accessories
+                                {formatSubcategoryLink(data, "Accessories")}
                             </NavDropdown.Item>
                             <NavDropdown.Item>
-                                Thermometers
+                                {formatSubcategoryLink(data, "Thermometers")}
                             </NavDropdown.Item>
                             <NavDropdown.Item>
-                                Pellets
+                                {formatSubcategoryLink(data, "Pellets")}
                             </NavDropdown.Item>
                             <NavDropdown.Item>
-                                Grills
+                                {formatSubcategoryLink(data, "Grills")}
                             </NavDropdown.Item>
                             <NavDropdown.Item>
-                                Smokers
+                                {formatSubcategoryLink(data, "Smokers")}
                             </NavDropdown.Item>
                             <NavDropdown.Item>
-                                All Grills & Smoker Inventory
+                                {formatCategoryLink(data, "Smokers", "All Smoker & Grill Inventory")}
                             </NavDropdown.Item>
                         </NavDropdown>
                         <NavbarText>Scroll Y: {scrollY}</NavbarText>
