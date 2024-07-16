@@ -9,20 +9,8 @@ import TopBar from "../components/TopBar.comp.jsx";
 import Vendor from "../components/Vendor.comp.jsx";
 import Location from "../components/Location.comp.jsx";
 import Navigation from "../components/Navigation.comp.jsx";
-import { accessData } from "../context/DataContext.context.jsx";
-import { getProductsByCategory } from "../util/filterData.util.js";
 
 const Home = () => {
-
-    const { data, setData } = accessData();
-
-    useEffect(() => {
-        if (data.length <= 0) {
-            console.log("data is undefined");
-            return;
-        }
-        console.log(getProductsByCategory(data, "Smokers"));
-    }, [data]);
 
     return (
         <>
