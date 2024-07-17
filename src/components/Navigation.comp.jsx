@@ -46,25 +46,25 @@ const Navigation = () => {
     }, [effectValue]);
 
     const formatSubcategoryLink = (data, category, subcategory) => {
-        return <Link to={`/inventory/${category}/${subcategory}`}>
+        return <Link className="nav-link" to={`/inventory/${category}/${subcategory}`}>
             {subcategory} ({getProductCountBySubcategory(data, subcategory)})
         </Link>
     }
 
     const formatCategoryLink = (data, category, linkName) => {
-        return <Link to={`/inventory/${category}`}>
+        return <Link className="nav-link" to={`/inventory/${category}`}>
             {linkName} ({getProductCountByCategory(data, category)})
         </Link>
     }
 
     const formatInventoryLink = (data, linkName) => {
-        return <Link to={"/inventory"}>
+        return <Link className="nav-link" to={"/inventory"}>
             {linkName} ({getInventoryCount(data)})
         </Link>
     }
 
     const formatHomeLink = () => {
-        return <Link to="/">Home</Link>
+        return <Link className="nav-link" to="/">Home</Link>
     }
 
     return (
@@ -73,8 +73,8 @@ const Navigation = () => {
 				<NavbarToggle aria-controls="basic-navbar-nav" />
 				<NavbarCollapse id="basic-navbar-nav">
 					<Nav className="ml-auto">
-						<NavLink>{formatHomeLink()}</NavLink>
-						<NavLink>{formatInventoryLink(data, "Inventory")}</NavLink>
+						{formatHomeLink()}
+						{formatInventoryLink(data, "Inventory")}
 						<NavDropdown title="Meats">
 							<NavDropdown.Item>
                                 {formatSubcategoryLink(data, "Meats", "Beef")}
