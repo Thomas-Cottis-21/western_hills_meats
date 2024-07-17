@@ -52,7 +52,7 @@ const Navigation = () => {
     }
 
     const formatCategoryLink = (data, category, linkName) => {
-        return <Link>
+        return <Link to={`/inventory/${category}`}>
             {linkName} ({getProductCountByCategory(data, category)})
         </Link>
     }
