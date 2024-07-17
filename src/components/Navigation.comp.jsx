@@ -132,8 +132,6 @@ const Navigation = () => {
                                 {formatCategoryLink(data, "Smokers", "All Smoker & Grill Inventory")}
                             </NavDropdown.Item>
                         </NavDropdown>
-                        <NavbarText>{effectValue}</NavbarText>
-                        <NavbarText>{scrollY}</NavbarText>
 					</Nav>
 				</NavbarCollapse>
 			</Navbar>
