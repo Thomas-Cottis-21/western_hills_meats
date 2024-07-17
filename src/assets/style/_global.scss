@@ -33,6 +33,20 @@ p.topbar {
     padding: 0px;
     margin: 0px;
 }
+p.title {
+    font-size: $title-sm;
+    font-family: $titleFont;
+}
+p.productSupport {
+    font-size: $subtitle;
+    font-family: $content;
+    padding: 0px;
+    margin: 0px;
+
+    span {
+        color: $primary;
+    }
+}
 button {
     transition: all ease-in-out .2s;
     background-color: $primary;

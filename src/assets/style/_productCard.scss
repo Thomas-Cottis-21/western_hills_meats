@@ -1,5 +1,11 @@
 .productCard {
     display: flex;
     flex-direction: column;
-    margin: 20px;
+    padding: 20px;
+    background-color: $dark;
+    color: $light;
+    border-radius: 5px;
+}
+.productCard:hover {
+    cursor: pointer;
 }
