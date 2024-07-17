@@ -7,7 +7,7 @@ const ProductsSubcategory = (props) => {
         <section>
             <TopBar />
             <Navigation />
-            <ProductListingHero />
+            <ProductListingHero category={props.category} subcategory={props.subcategory} />
         </section>
     );
 }

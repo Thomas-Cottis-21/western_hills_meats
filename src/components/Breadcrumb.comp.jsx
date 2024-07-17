@@ -1,7 +1,11 @@
-const Breadcrumb = () => {
+const Breadcrumb = (props) => {
     return (
         <div className="breadcrumb">
-            <span>Breadcrumb</span>
+            <span>
+                Inventory 
+                {props.category && ` / ${props.category}`}
+                {props.subcategory && ` / ${props.subcategory}`}
+            </span>
         </div>
     );
 }

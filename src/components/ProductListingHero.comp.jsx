@@ -1,10 +1,10 @@
 import Breadcrumb from "./Breadcrumb.comp.jsx";
 
-const ProductListingHero = () => {
+const ProductListingHero = (props) => {
     return (
         <>
             <div className="productListingHero">
-                <Breadcrumb />
+                <Breadcrumb category={props.category} subcategory={props.subcategory} />
             </div>
         </>
     );
