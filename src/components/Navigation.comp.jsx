@@ -30,13 +30,13 @@ const Navigation = () => {
     }, [scrollY]);
 
     const calculateBlurEffect = () => {
-        const effectValue = scrollY / 20;
-        setEffectValue(Math.trunc(effectValue));
+        const newValue = scrollY / 8;
+        setEffectValue(Math.trunc(newValue + 2));
     }
 
     useEffect(() => {
         //set backdrop blur value to effect value
-        if (effectValue <= 25) {
+        if (effectValue <= 27) {
             setBackdropFilter(`blur(${effectValue}px)`);
             navbarRef.current.style.backgroundColor = "";
         } else {
@@ -132,6 +132,8 @@ const Navigation = () => {
                                 {formatCategoryLink(data, "Smokers", "All Smoker & Grill Inventory")}
                             </NavDropdown.Item>
                         </NavDropdown>
+                        <NavbarText>{effectValue}</NavbarText>
+                        <NavbarText>{scrollY}</NavbarText>
 					</Nav>
 				</NavbarCollapse>
 			</Navbar>

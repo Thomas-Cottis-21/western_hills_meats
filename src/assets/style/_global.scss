@@ -49,7 +49,13 @@ button:hover {
     border-radius: 5px;
     color: $dark;
 }
-
+a {
+    color: $light;
+    transition: all ease-in-out .3s;
+}
+a:hover {
+    color: $accent;
+}
 .formControl {
     display: flex;
     flex-direction: column;
