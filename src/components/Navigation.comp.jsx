@@ -63,13 +63,17 @@ const Navigation = () => {
         </Link>
     }
 
+    const formatHomeLink = () => {
+        return <Link to="/">Home</Link>
+    }
+
     return (
 			<Navbar ref={navbarRef} expand="md" data-bs-theme="dark" fixed="top" id="navbar" style={{ backdropFilter: backdropFilter }}>
 				<NavbarBrand>Western Hills Quality Meats</NavbarBrand>
 				<NavbarToggle aria-controls="basic-navbar-nav" />
 				<NavbarCollapse id="basic-navbar-nav">
 					<Nav className="ml-auto">
-						<NavLink>Home</NavLink>
+						<NavLink>{formatHomeLink()}</NavLink>
 						<NavLink>{formatInventoryLink(data, "Inventory")}</NavLink>
 						<NavDropdown title="Meats">
 							<NavDropdown.Item>

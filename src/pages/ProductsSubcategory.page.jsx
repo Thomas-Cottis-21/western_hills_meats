@@ -1,14 +1,14 @@
+import Navigation from "../components/Navigation.comp";
+import ProductListingHero from "../components/ProductListingHero.comp";
+import TopBar from "../components/TopBar.comp";
+
 const ProductsSubcategory = (props) => {
     return (
-        <div>
-            <h1 className="title">
-                This is the products subcategory page
-            </h1>
-            <p className="subtitle">
-                Category: {props.category} <br/>
-                Subcategory: {props.subcategory}
-            </p>
-        </div>
+        <section>
+            <TopBar />
+            <Navigation />
+            <ProductListingHero />
+        </section>
     );
 }
 
