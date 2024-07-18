@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import Navigation from "../components/Navigation.comp";
 import ProductGrid from "../components/ProductGrid.comp";
 import ProductListingHero from "../components/ProductListingHero.comp";
