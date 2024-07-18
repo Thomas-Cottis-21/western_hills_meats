@@ -4,7 +4,7 @@ const ProductListingHero = (props) => {
     return (
         <>
             <div className="productListingHero">
-                <Breadcrumb category={props.category} subcategory={props.subcategory} />
+                <Breadcrumb category={props.category} subcategory={props.subcategory} productCount={props.productCount} />
             </div>
         </>
     );

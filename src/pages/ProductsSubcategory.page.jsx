@@ -3,7 +3,7 @@ import ProductGrid from "../components/ProductGrid.comp";
 import ProductListingHero from "../components/ProductListingHero.comp";
 import TopBar from "../components/TopBar.comp";
 import { accessData } from "../context/DataContext.context";
-import { getProductsBySubcategory } from "../util/filterData.util";
+import { getProductCountBySubcategory, getProductsBySubcategory } from "../util/filterData.util";
 
 const ProductsSubcategory = (props) => {
 
@@ -13,7 +13,7 @@ const ProductsSubcategory = (props) => {
         <section>
             <TopBar />
             <Navigation />
-            <ProductListingHero category={props.category} subcategory={props.subcategory} />
+            <ProductListingHero category={props.category} subcategory={props.subcategory} productCount={getProductCountBySubcategory(data, props.subcategory)} />
             <ProductGrid data={getProductsBySubcategory(data, props.subcategory)} />
         </section>
     );
