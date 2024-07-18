@@ -47,6 +47,16 @@ p.productSupport {
     margin: 0px;
 
     span {
+        font-size: $title-sm;
+        text-decoration: underline;
+        text-decoration-color: $attention;
+    }
+
+    &.instock {
+        color: $success;
+    }
+
+    &.outofstock {
         color: $primary;
     }
 }
