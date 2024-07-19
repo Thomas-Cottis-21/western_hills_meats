@@ -1,5 +1,5 @@
+import { formatImage } from "../util/formatImage.util";
 import { formatStockClass } from "../util/formatString.util";
-import productPhoto from "../assets/productPhoto.jpg";
 
 const ProductCard = ({ product, index }) => {
 	return (
@@ -31,7 +31,7 @@ const ProductCard = ({ product, index }) => {
 			) : (
 				<div className="productCard">
 					<div className="image">
-						<img src={productPhoto} />
+						<img src={formatImage(product.images[0])} />
 					</div>
 					<div className="productListingData">
 						<p className="title">{product.name}</p>
