@@ -1,6 +1,8 @@
 #condimentHero {
     background-color: $light;
-    color: $dark;
+    background-image: url("https://western-hills-data-space.nyc3.cdn.digitaloceanspaces.com/assets/images/propaganda/hero/pepperingEdited.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 
     div {
         position: relative;
@@ -8,23 +10,10 @@
         z-index: 1;
         padding: 200px 0;
     }
-
-    img {
-        width: 80%;
-        position: absolute;
-        top: 5%;
-        left: 50%;
-        transform: translate(-50%);
-        z-index: -100;
-        opacity: .8;
-    }
 }
 
 @media (min-width: 760px) {
     #condimentHero {
-        img {
-            top: 0;
-            width: 40%;
-        }
+        background-image: url("https://western-hills-data-space.nyc3.cdn.digitaloceanspaces.com/assets/images/propaganda/hero/meatMarinadeEdited.jpg");
     }
 }

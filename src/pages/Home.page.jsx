@@ -19,9 +19,9 @@ const Home = () => {
             <MeatHero/>
             <Vendor />
             <Location />
-            <CallToAction/>
             <CondimentHero/>
             <SmokerHero/>
+            <CallToAction/>
             <Contact/>
         </>
     );

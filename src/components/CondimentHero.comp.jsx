@@ -1,14 +1,11 @@
-import explosion2 from "../assets/images/explosion2.png";
-
 const CondimentHero = () => {
     return (
         <section id="condimentHero">
             <div>
-                <h1 className="title">
+                <h1 className="title light">
                     We Stock Booming Flavor
                 </h1>
-                <button>Explore Spices</button>
-                <img src={explosion2}/>
+                <button>Explore Condiments</button>
             </div>
         </section>
     );

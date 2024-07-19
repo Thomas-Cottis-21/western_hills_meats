@@ -2,12 +2,11 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-image: url(../images/fireVertEdited.jpg);
+    background-image: url(https://western-hills-data-space.nyc3.cdn.digitaloceanspaces.com/assets/images/propaganda/hero/fireVertEdited.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom center;
     background-color: $secondary;
-    //padding: 225px 0px;
     height: 100lvh;
 
     .hero-content {
@@ -20,7 +19,6 @@
 }
 @media (min-width: 768px) {
     #hero {
-        background-image: url("../images/fireHor.jpg");
-        //padding: 400px;
+        background-image: url("https://western-hills-data-space.nyc3.cdn.digitaloceanspaces.com/assets/images/propaganda/hero/fireHorEdited.jpg");
     }
 }

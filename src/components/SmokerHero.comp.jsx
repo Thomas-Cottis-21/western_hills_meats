@@ -1,10 +1,15 @@
 import ImageGrid from "./ImageGrid.comp";
-import traeger from "../assets/images/traegerLogo.svg";
-import gozney from "../assets/images/gozneyLogo.svg";
-import yoder from "../assets/images/yoderLogo.png";
-import ooni from "../assets/images/ooniLogo.svg";
 
 const SmokerHero = () => {
+
+	//TODO update this to follow best practice
+	const traeger =
+		"https://western-hills-data-space.nyc3.cdn.digitaloceanspaces.com/assets/images/propaganda/logos/traegerLogo.svg";
+	const gozney =
+		"https://western-hills-data-space.nyc3.cdn.digitaloceanspaces.com/assets/images/propaganda/logos/gozneyLogo.svg";
+	const yoder = "https://western-hills-data-space.nyc3.cdn.digitaloceanspaces.com/assets/images/propaganda/logos/yoderLogo.png";
+	const ooni =
+		"https://western-hills-data-space.nyc3.cdn.digitaloceanspaces.com/assets/images/propaganda/logos/ooniLogo.svg";
 
 	const imagesArray = [traeger, gozney, yoder, ooni];
 
