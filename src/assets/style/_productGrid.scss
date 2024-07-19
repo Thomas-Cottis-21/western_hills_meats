@@ -5,7 +5,7 @@
     grid-gap: 10px;
     padding: 10px;
 }
-@media (min-width: 768px) {
+@media (min-width: 600px) {
     .productGrid {
         grid-template-columns: repeat(2, 1fr);
     }
