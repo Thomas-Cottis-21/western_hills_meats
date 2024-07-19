@@ -1,7 +1,7 @@
 const CondimentHero = () => {
     return (
         <section id="condimentHero">
-            <div>
+            <div className="hero">
                 <h1 className="title light">
                     We Stock Booming Flavor
                 </h1>

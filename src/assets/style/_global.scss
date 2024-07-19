@@ -20,6 +20,12 @@ h1 {
 h2 {
     font-size: $title-sm;
 }
+h1.title {
+    font-size: $title-xl;
+}
+.hero {
+    padding: 300px $sidePadding;
+}
 p {
     font-family: $content;
     margin: 5px 0px;
