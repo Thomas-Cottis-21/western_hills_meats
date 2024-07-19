@@ -5,7 +5,7 @@ const ProductGrid = (props) => {
         <div className="productGrid">
             {props.data && props.data.length > 0 ? (
                 props.data.map((product, index) => (
-                    <ProductCard key={index} product={product}/>
+                    <ProductCard key={index} index={index} product={product}/>
                 ))
             ) : (
                 <h1>No data</h1>

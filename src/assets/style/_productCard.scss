@@ -26,3 +26,17 @@
 .productCard:hover {
     cursor: pointer;
 }
+.meatRow {
+    grid-column: 1 / -1;
+
+    .meatRowData {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        .left {
+            flex: 1;
+        }
+    }
+}
