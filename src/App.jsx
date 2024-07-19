@@ -23,8 +23,9 @@ const App = () => {
 
   const handleAddProductData = (products, productImages) => {
     //compile product data with image data
-
-    setData(compileProductData(products, productImages));
+    const compiledData = compileProductData(products, productImages);
+    console.log(compiledData);
+    setData(compiledData);
     console.log("Product data added to context");
   };
 
