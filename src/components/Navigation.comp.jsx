@@ -104,7 +104,11 @@ const Navigation = () => {
 			fixed="top"
 			id="navbar"
 			style={{ backdropFilter: backdropFilter }}>
-			<NavbarBrand>Western Hills Quality Meats</NavbarBrand>
+			<NavbarBrand>
+				<Link to={"/"}>
+					<img src="https://western-hills-data-space.nyc3.cdn.digitaloceanspaces.com/assets/images/propaganda/logos/western_hills_logo.svg" width="140" className="d-inline-block align-top p-2" />
+				</Link>
+			</NavbarBrand>
 			<NavbarToggle aria-controls="basic-navbar-nav" />
 			<NavbarCollapse id="basic-navbar-nav">
 				<Nav className="ml-auto">
