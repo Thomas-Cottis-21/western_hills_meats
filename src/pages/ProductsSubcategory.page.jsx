@@ -1,3 +1,4 @@
+import Footer from "../components/Footer.comp";
 import Navigation from "../components/Navigation.comp";
 import ProductGrid from "../components/ProductGrid.comp";
 import ProductListingHero from "../components/ProductListingHero.comp";
@@ -15,6 +16,7 @@ const ProductsSubcategory = (props) => {
             <Navigation />
             <ProductListingHero category={props.category} subcategory={props.subcategory} productCount={getProductCountBySubcategory(data, props.subcategory)} />
             <ProductGrid data={getProductsBySubcategory(data, props.subcategory)} />
+            <Footer />
         </section>
     );
 }

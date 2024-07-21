@@ -1,3 +1,4 @@
+import Footer from "../components/Footer.comp";
 import InventoryListingHero from "../components/InventoryListingHero.comp";
 import Navigation from "../components/Navigation.comp";
 import ProductGrid from "../components/ProductGrid.comp";
@@ -14,6 +15,7 @@ const Inventory = () => {
             <Navigation />
             <InventoryListingHero data={data}/>
             <ProductGrid data={data} />
+            <Footer />
         </section>
     );
 }

@@ -8,6 +8,7 @@ import TopBar from "../components/TopBar.comp.jsx";
 import Vendor from "../components/Vendor.comp.jsx";
 import Location from "../components/Location.comp.jsx";
 import Navigation from "../components/Navigation.comp.jsx";
+import Footer from "../components/Footer.comp.jsx";
 
 const Home = () => {
 
@@ -23,6 +24,7 @@ const Home = () => {
             <SmokerHero/>
             <CallToAction/>
             <Contact/>
+            <Footer />
         </>
     );
 }
