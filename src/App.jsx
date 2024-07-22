@@ -8,6 +8,7 @@ import ProductsSubcategory from "./pages/ProductsSubcategory.page.jsx";
 import ProductsCategory from "./pages/ProductsCategory.page.jsx";
 import Inventory from "./pages/Inventory.page.jsx";
 import getProductImages from "./util/getProductImages.js";
+import VendorSetup from "./pages/VendorSetup.page.jsx";
 
 const App = () => {
   const { data, setData } = accessData();
@@ -66,6 +67,7 @@ const App = () => {
         <Route path="/inventory/:category" element={< DynamicCategory />}/>
         <Route path="/inventory" element={<Inventory />} />
         <Route path="*" element={<NotFound />}/>
+        <Route path="/vendor" element={<VendorSetup />} />
       </Routes>
     </Router>
   );
