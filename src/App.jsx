@@ -9,6 +9,7 @@ import ProductsCategory from "./pages/ProductsCategory.page.jsx";
 import Inventory from "./pages/Inventory.page.jsx";
 import getProductImages from "./util/getProductImages.js";
 import VendorSetup from "./pages/VendorSetup.page.jsx";
+import ScrollToTop from "./context/ScrollToTop.context.jsx";
 
 const App = () => {
   const { data, setData } = accessData();
@@ -61,6 +62,7 @@ const App = () => {
 
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/inventory/:category/:subcategory" element={<DynamicSubcategory />} />
