@@ -1,4 +1,13 @@
+import { useNavigate } from "react-router-dom";
+
 const Vendor = () => {
+
+    const navigate = useNavigate();
+
+    handleVendorGetStarted = () => {
+        navigate("/vendor");
+    };
+
     return (
         <div className="vendor">
             <h1 className="title">
@@ -7,7 +16,7 @@ const Vendor = () => {
             <p className="subtitle">
                 We've got you covered
             </p>
-            <button>Get Started!</button>
+            <button onClick={handleVendorGetStarted}>Get Started!</button>
         </div>
     );
 }
