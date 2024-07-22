@@ -54,7 +54,7 @@ const Navigation = () => {
 			navbarRef.current.style.backgroundColor = "";
 		} else {
 			setBackdropFilter("");
-			navbarRef.current.style.backgroundColor = "#393939";
+			navbarRef.current.style.backgroundColor = "#1b1b1b";
 		}
 	}, [effectValue]);
 

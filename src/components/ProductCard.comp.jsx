@@ -9,8 +9,8 @@ const ProductCard = ({ product, index }) => {
 					{index === 0 ? "" : <hr />}
 					<div className="meatRowData">
 						<div className="left">
-							<p className="title">{product.name}</p>
-							<p className="productSupport">
+							<p className="title light">{product.name}</p>
+							<p className="productSupport light">
 								{product.brandName} - {product.categoryName} /{" "}
 								{product.subcategoryName}
 							</p>
@@ -21,7 +21,7 @@ const ProductCard = ({ product, index }) => {
 								{product.quantityTypeName}
 							</p>
 						</div>
-						<div className="right">
+						<div className="right light">
 							<p className="productSupport">
 								<span>${product.price}</span> / {product.priceTypeName}
 							</p>

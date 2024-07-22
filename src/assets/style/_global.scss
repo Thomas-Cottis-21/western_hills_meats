@@ -58,11 +58,11 @@ p.productSupport {
     span {
         font-size: $title-sm;
         text-decoration: underline;
-        text-decoration-color: $attention;
+        text-decoration-color: $primary;
     }
 
     &.instock {
-        color: $attention;
+        color: $success;
     }
 
     &.outofstock {
