@@ -99,14 +99,18 @@ const Navigation = () => {
 	return (
 		<Navbar
 			ref={navbarRef}
-			expand="md"
+			expand="lg"
 			data-bs-theme="dark"
 			fixed="top"
 			id="navbar"
 			style={{ backdropFilter: backdropFilter }}>
 			<NavbarBrand>
 				<Link to={"/"}>
-					<img src="https://western-hills-data-space.nyc3.cdn.digitaloceanspaces.com/assets/images/propaganda/logos/western_hills_logo.svg" width="140" className="d-inline-block align-top p-2" />
+					<img
+						src="https://western-hills-data-space.nyc3.cdn.digitaloceanspaces.com/assets/images/propaganda/logos/western_hills_logo.svg"
+						width="140"
+						className="d-inline-block align-top p-2"
+					/>
 				</Link>
 			</NavbarBrand>
 			<NavbarToggle aria-controls="basic-navbar-nav" />
@@ -146,6 +150,11 @@ const Navigation = () => {
 						)}
 					</NavDropdown>
 				</Nav>
+				<NavbarText>
+					<p>
+						Store Phone: <a href="tel:+13858998586">+1 385 899 8586</a>
+					</p>
+				</NavbarText>
 			</NavbarCollapse>
 		</Navbar>
 	);

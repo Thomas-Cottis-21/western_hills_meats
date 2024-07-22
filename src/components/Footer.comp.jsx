@@ -7,12 +7,11 @@ const Footer = () => {
 					<div className="footerLinksContainer">
 						<div className="footerLinks">
 							<h2>Quick links</h2>
-							<a href="/">Home</a>
-							<a href="/inventory">Inventory</a>
-							<a href="/inventory/meats">Meats</a>
-							<a href="/inventory/condiments">Condiments</a>
-							<a href="/inventory/smokers">Smokers</a>
-							<a href="/inventory">Inventory</a>
+							<Link to={"/"}>Home</Link>
+                            <Link to={"/inventory"}>Inventory</Link>
+                            <Link to={"/inventory/meats"}>Meats</Link>
+                            <Link to={"/inventory/condiments"}>Condiments</Link>
+                            <Link to={"/inventory/smokers"}>Grills & Smokers</Link>
 						</div>
 						<div className="footerLinks">
 							<h2>Partners</h2>
