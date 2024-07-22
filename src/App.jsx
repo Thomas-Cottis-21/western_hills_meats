@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { BrowserRouter as Router, Route, Routes, useParams } from "react-router-dom";
 import Home from "./pages/Home.page";
 import NotFound from "./pages/NotFound.page";
 import getProducts from "./util/getProducts.util.js";
@@ -8,7 +9,6 @@ import ProductsCategory from "./pages/ProductsCategory.page.jsx";
 import Inventory from "./pages/Inventory.page.jsx";
 import getProductImages from "./util/getProductImages.js";
 import VendorSetup from "./pages/VendorSetup.page.jsx";
-import { createBrowserRouter, RouterProvider, ScrollRestoration, useParams } from "react-router-dom";
 
 const App = () => {
   const { data, setData } = accessData();
@@ -59,39 +59,17 @@ const App = () => {
     return <ProductsCategory category={category} />
   }
 
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Home />
-    },
-    {
-      path: "/inventory",
-      element: <Inventory />
-    },
-    {
-      path: "/inventory/:category/:subcategory",
-      element: <DynamicSubcategory />
-    }, 
-    {
-      path: "/inventory/:category",
-      element: <DynamicCategory />
-    },
-    {
-      path: "/vendor",
-      element: <VendorSetup />
-    }, 
-    {
-      path: "*",
-      element: <NotFound />
-    }
-  ]);
-
   return (
-      <RouterProvider router={router}>
-        <ScrollRestoration getKey={(location => {
-          return location.pathname;
-        })} />
-      </RouterProvider>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/inventory/:category/:subcategory" element={<DynamicSubcategory />} />
+        <Route path="/inventory/:category" element={< DynamicCategory />}/>
+        <Route path="/inventory" element={<Inventory />} />
+        <Route path="*" element={<NotFound />}/>
+        <Route path="/vendor" element={<VendorSetup />} />
+      </Routes>
+    </Router>
   );
 }
 
