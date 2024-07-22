@@ -1,8 +1,11 @@
-const Message = () => {
+const Message = (props) => {
     return (
         <textarea
-            name="message"
-            placeholder="Message">
+            name={props.name}
+            value={props.value}
+            placeholder="Message"
+            onChange={props.onChange}
+            onBlur={props.onBlur}>
         </textarea>
     );
 }

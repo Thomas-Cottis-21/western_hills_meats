@@ -58,9 +58,18 @@ const Contact = () => {
                 onBlur={handleBlur}/>
 
                 <ErrorMessage  message={"error message"} />
-                <Email />
+                <Email 
+                name="email"
+                value={values.email}
+                onChange={handleChange}
+                onBlur={handleBlur}/>
+
                 <ErrorMessage message={"error message"} />
-                <Message />
+                <Message 
+                name="message"
+                value={values.message}
+                onChange={handleChange}
+                onBlur={handleBlur}/>
             </form>
             <div className="formControl">
                 <button>Send</button>

@@ -2,10 +2,11 @@ const Email = (props) => {
     return (
         <input 
             type="email"
-            name="email"
-            id="email"
+            name={props.name}
+            value={props.value}
             placeholder="Email"
-            value={props.userInputKey}
+            onChange={props.onChange}
+            onBlur={props.onBlur}
         />
     );
 }
