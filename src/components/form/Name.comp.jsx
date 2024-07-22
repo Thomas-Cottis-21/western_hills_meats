@@ -2,10 +2,11 @@ const Name = (props) => {
     return (
         <input 
             type="text"
-            name="name"
-            id="name"
+            name={props.name}
+            value={props.value}
+            onChange={props.onChange}
+            onBlur={props.onBlur}
             placeholder="Name"
-            value={props.userInputKey}
         />
     );
 }
