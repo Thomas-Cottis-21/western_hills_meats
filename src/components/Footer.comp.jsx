@@ -1,11 +1,71 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
     return (
-        <section id="footer">
-            <div>
-                
-            </div>
-        </section>
-    );
+			<footer id="footer">
+				<div className="footerContainer">
+					<div className="footerLinksContainer">
+						<div className="footerLinks">
+							<h2>Quick links</h2>
+							<a href="/">Home</a>
+							<a href="/inventory">Inventory</a>
+							<a href="/inventory/meats">Meats</a>
+							<a href="/inventory/condiments">Condiments</a>
+							<a href="/inventory/smokers">Smokers</a>
+							<a href="/inventory">Inventory</a>
+						</div>
+						<div className="footerLinks">
+							<h2>Partners</h2>
+							<a
+								href="https://www.traeger.com/"
+								target="_blank"
+								rel="noopener noreferrer">
+								Traeger
+							</a>
+							<a
+								href="https://www.bbqpitstop.com/"
+								target="_blank"
+								rel="noopener noreferrer">
+								BBQ PitStop
+							</a>
+							<a
+								href="https://us.gozney.com/"
+								target="_blank"
+								rel="noopener noreferrer">
+								Gozney
+							</a>
+							<a
+								href="https://www.yodersmokers.com/"
+								target="_blank"
+								rel="noopener noreferrer">
+								Yoder
+							</a>
+							<a
+								href="https://bacanagrills.com/"
+								target="_blank"
+								rel="noopener noreferrer">
+								Bacana
+							</a>
+						</div>
+					</div>
+					<div className="footerSupportContainer">
+						<h2>Support</h2>
+						<p className="subtitle">
+							Store Phone: <a href="tel:+13858998586">+1 385 899 8586</a>
+						</p>
+						<p className="subtitle">
+							Store Address:{" "}
+							<a
+								href="https://www.google.com/maps/place/Western+Hills+Meats%2FBBQ+Pit+Stop/@40.0438898,-111.720504,17z/data=!3m1!4b1!4m6!3m5!1s0x874da565e0b89d15:0x8a9eeae05a44346f!8m2!3d40.0438898!4d-111.7179291!16s%2Fg%2F11ss5b_t99?entry=ttu"
+								target="_blank"
+								rel="noopener noreferrer">
+								35 N 900 E St, Payson, UT 84651
+							</a>
+						</p>
+					</div>
+				</div>
+			</footer>
+		);
 }
 
 export default Footer;
