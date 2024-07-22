@@ -4,7 +4,7 @@ const Vendor = () => {
 
     const navigate = useNavigate();
 
-    handleVendorGetStarted = () => {
+    const handleVendorGetStarted = () => {
         navigate("/vendor");
     };
 
