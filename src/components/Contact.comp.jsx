@@ -3,12 +3,17 @@ import Email from "./form/Email.comp.jsx";
 import Name from "./form/Name.comp.jsx";
 import Message from "./form/Message.comp.jsx";
 import ErrorMessage from "./form/ErrorMessage.comp.jsx";
+import validationRules from "../util/formValidation.util.js";
 
 const Contact = () => {
 
     const [loading, setLoading] = useState(false);
     
     const [errors, setErrors] = useState({});
+
+    useEffect(() => {
+        console.log(errors);
+    }, [errors]);
 
     const [touched, setTouched] = useState({
         name: false,
@@ -32,7 +37,9 @@ const Contact = () => {
             ...values,
             [name]: value
         });
-        //TODO check if touched here, if so, validate on change
+        if (touched[name]) {
+            validate(name, value);
+        }
     }
 
     const handleBlur = (event) => {
@@ -41,7 +48,20 @@ const Contact = () => {
             ...prevTouched,
             [name]: true
         }));
-        //TODO validate here
+        validate(name, values[name]);
+    }
+
+    const validate = (name, value) => {
+
+        let fieldError = validationRules[name](value);
+
+        setErrors(prevErrors => ({
+            ...prevErrors,
+            [name]: fieldError
+        }))
+
+        return fieldError;
+
     }
 
     return (
@@ -50,21 +70,21 @@ const Contact = () => {
             <p className="subtitle">Don't be shy! Shoot us an email via the form below and we'll get back to you shortly</p>
             <form className="userContact">
 
-                <ErrorMessage message={"error message"} />
+                <ErrorMessage message={errors.name ? errors.name : ""} />
                 <Name 
                 name="name"
                 value={values.name}
                 onChange={handleChange}
                 onBlur={handleBlur}/>
 
-                <ErrorMessage  message={"error message"} />
+                <ErrorMessage  message={errors.email ? errors.email : ""} />
                 <Email 
                 name="email"
                 value={values.email}
                 onChange={handleChange}
                 onBlur={handleBlur}/>
 
-                <ErrorMessage message={"error message"} />
+                <ErrorMessage message={errors.message ? errors.message : ""} />
                 <Message 
                 name="message"
                 value={values.message}
