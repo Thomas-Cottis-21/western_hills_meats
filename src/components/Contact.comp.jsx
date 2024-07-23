@@ -4,6 +4,7 @@ import Name from "./form/Name.comp.jsx";
 import Message from "./form/Message.comp.jsx";
 import ErrorMessage from "./form/ErrorMessage.comp.jsx";
 import validationRules from "../util/formValidation.util.js";
+import sendContactRequest from "../util/sendContactMessage.util.js";
 
 const Contact = () => {
 
@@ -49,6 +50,39 @@ const Contact = () => {
             [name]: true
         }));
         validate(name, values[name]);
+    }
+
+    const handleContactRequest = async () => {
+        const contactResponse = await sendContactRequest(values);
+
+        console.log(contactResponse);
+    }
+
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+
+        setLoading(true);
+
+        setTouched({
+            name: true,
+            email: true,
+            message: true
+        });
+
+        const updatedErrorList = {};
+        Object.entries(values).forEach(([key, value]) => {
+            const errorMessage = validate(key, value);
+            updatedErrorList[key] = errorMessage;
+        })
+
+        setErrors(updatedErrorList);
+
+        if (!Object.values(updatedErrorList).some(value => value)) {
+            await handleContactRequest();
+        } else {
+            setLoading(false);
+            console.log("errors were present", updatedErrorList);
+        }
     }
 
     const validate = (name, value) => {
@@ -99,7 +133,7 @@ const Contact = () => {
 
             </form>
             <div className="formControl">
-                <button>Send</button>
+                <button onClick={handleSubmit}>Send</button>
             </div>
         </section>
     );
