@@ -8,6 +8,16 @@ body {
 .attention {
     color: $attention;
 }
+.modal-content {
+    font-family: $content;
+    color: $light;
+}
+.error .modal-content {
+    background-color: $primary;
+}
+.success .modal-content {
+    background-color: $success;
+}
 h1, h2, h3, h4, h5, h6 {
     font-family: $titleFont;
     font-weight: 400;
