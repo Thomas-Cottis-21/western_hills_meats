@@ -113,3 +113,10 @@ input, textarea, select {
 textarea {
     height: 300px;
 }
+.errorMessage {
+    border-radius: 10px;
+    background-color: $primary;
+    padding: 10px;
+    margin: 10px 0px;
+    font-size: $content;
+}

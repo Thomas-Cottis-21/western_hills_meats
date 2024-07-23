@@ -70,26 +70,33 @@ const Contact = () => {
             <p className="subtitle">Don't be shy! Shoot us an email via the form below and we'll get back to you shortly</p>
             <form className="userContact">
 
-                <ErrorMessage message={errors.name ? errors.name : ""} />
-                <Name 
-                name="name"
-                value={values.name}
-                onChange={handleChange}
-                onBlur={handleBlur}/>
+                <div className="dataGroup">
+                    <ErrorMessage message={errors.name ? errors.name : ""} />
+                    <Name 
+                    name="name"
+                    value={values.name}
+                    onChange={handleChange}
+                    onBlur={handleBlur}/>
+                </div>
 
-                <ErrorMessage  message={errors.email ? errors.email : ""} />
-                <Email 
-                name="email"
-                value={values.email}
-                onChange={handleChange}
-                onBlur={handleBlur}/>
+                <div className="dataGroup">
+                    <ErrorMessage  message={errors.email ? errors.email : ""} />
+                    <Email 
+                    name="email"
+                    value={values.email}
+                    onChange={handleChange}
+                    onBlur={handleBlur}/>
+                </div>
 
-                <ErrorMessage message={errors.message ? errors.message : ""} />
-                <Message 
-                name="message"
-                value={values.message}
-                onChange={handleChange}
-                onBlur={handleBlur}/>
+                <div className="dataGroupWide">
+                    <ErrorMessage message={errors.message ? errors.message : ""} />
+                    <Message 
+                    name="message"
+                    value={values.message}
+                    onChange={handleChange}
+                    onBlur={handleBlur}/>
+                </div>
+
             </form>
             <div className="formControl">
                 <button>Send</button>

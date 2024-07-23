@@ -1,6 +1,8 @@
 const ErrorMessage = ({ message }) => {
     return (
-        <span>{message}</span>
+        <div className={message != "" ? "errorMessage" : ""}>
+            <p>{message}</p>
+        </div>
     );
 }
 

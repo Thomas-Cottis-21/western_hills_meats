@@ -5,13 +5,17 @@
 
     .userContact {
         display: grid;
-        grid-template-columns: 2;
+        grid-template-columns: repeat(2, 1fr);
         gap: 10px;
-        
-        input {
+
+        .dataGroup {
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
             grid-column: span 2;
+
         }
-        textarea {
+        .dataGroupWide {
             grid-column: span 2;
         }
     }
@@ -19,14 +23,9 @@
 @media (min-width: 768px) {
     .contact {
         .userContact {
-            input {
+            .dataGroup {
                 grid-column: span 1;
             }
         }
-    }
-}
-@media (min-width: 1200px) {
-    .contact {
-        padding: 100px 150px;
     }
 }
