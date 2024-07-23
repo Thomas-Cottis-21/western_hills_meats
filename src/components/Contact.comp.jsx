@@ -5,11 +5,16 @@ import Message from "./form/Message.comp.jsx";
 import ErrorMessage from "./form/ErrorMessage.comp.jsx";
 import validationRules from "../util/formValidation.util.js";
 import sendContactRequest from "../util/sendContactMessage.util.js";
+import ContactModal from "./ContactModal.comp.jsx";
 
 const Contact = () => {
 
     const [loading, setLoading] = useState(false);
-    
+    const [showModal, setShowModal] = useState(false);
+
+    const handleShowModal = () => setShowModal(true);
+    const handleCloseModal = () => setShowModal(false);
+
     const [errors, setErrors] = useState({});
 
     useEffect(() => {
@@ -60,6 +65,8 @@ const Contact = () => {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
+
+        handleShowModal();
 
         setLoading(true);
 
@@ -135,6 +142,7 @@ const Contact = () => {
             <div className="formControl">
                 <button onClick={handleSubmit}>Send</button>
             </div>
+            <ContactModal show={showModal} handleClose={handleCloseModal} />
         </section>
     );
 }
