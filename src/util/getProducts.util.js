@@ -1,7 +1,7 @@
 const getProducts = async () => {
     try {
         const response = await fetch(
-				"https://ahiporti.com/api/ecomm/products"
+				"https://console.ahiporti.com/api/ecomm/products"
 			);
         if (!response.ok) {
             throw new Error("Failed to fetch product data");
