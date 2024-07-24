@@ -25,6 +25,12 @@ const Navigation = () => {
 
 	const { data, setData } = accessData();
 
+	const [isExpanded, setIsExpanded] = useState(false);
+
+	const handleSelect = () => {
+		setIsExpanded(false);
+	}
+
 	useEffect(() => {
 		window.addEventListener("scroll", handleScroll);
 
@@ -62,6 +68,7 @@ const Navigation = () => {
 		return (
 			<NavDropdown.Item
 				as={Link}
+				onClick={handleSelect}
 				className="nav-link"
 				to={`/inventory/${category}/${subcategory}`}>
 				{subcategory} ({getProductCountBySubcategory(data, subcategory)})
@@ -73,6 +80,7 @@ const Navigation = () => {
 		return (
 			<NavDropdown.Item
 				as={Link}
+				onClick={handleSelect}
 				className="nav-link"
 				to={`/inventory/${category}`}>
 				{linkName} ({getProductCountByCategory(data, category)})
@@ -82,7 +90,7 @@ const Navigation = () => {
 
 	const formatInventoryLink = (data, linkName) => {
 		return (
-			<Nav.Link as={Link} className="nav-link" to={"/inventory"}>
+			<Nav.Link as={Link} className="nav-link" to={"/inventory"} onClick={handleSelect}>
 				{linkName} ({getInventoryCount(data)})
 			</Nav.Link>
 		);
@@ -90,7 +98,7 @@ const Navigation = () => {
 
 	const formatHomeLink = () => {
 		return (
-			<Nav.Link as={Link} className="nav-link" to="/">
+			<Nav.Link as={Link} onClick={handleSelect} className="nav-link" to="/">
 				Home
 			</Nav.Link>
 		);
@@ -100,6 +108,7 @@ const Navigation = () => {
 		<Navbar
 			ref={navbarRef}
 			expand="lg"
+			expanded={isExpanded}
 			data-bs-theme="dark"
 			fixed="top"
 			id="navbar"
@@ -113,7 +122,8 @@ const Navigation = () => {
 					/>
 				</Link>
 			</NavbarBrand>
-			<NavbarToggle aria-controls="basic-navbar-nav" />
+			<NavbarToggle aria-controls="basic-navbar-nav"
+			onClick={() => setIsExpanded(!isExpanded)} />
 			<NavbarCollapse id="basic-navbar-nav">
 				<Nav className="ml-auto">
 					{formatHomeLink()}
