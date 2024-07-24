@@ -12,6 +12,8 @@ const Contact = () => {
     const [loading, setLoading] = useState(false);
     const [showModal, setShowModal] = useState(false);
 
+    const [responseSuccess, setResponseSuccess] = useState(false);
+
     const handleShowModal = () => setShowModal(true);
     const handleCloseModal = () => setShowModal(false);
 
@@ -61,12 +63,12 @@ const Contact = () => {
         const contactResponse = await sendContactRequest(values);
 
         console.log(contactResponse);
+        setResponseSuccess(contactResponse.success);
+        handleShowModal();
     }
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-
-        handleShowModal();
 
         setLoading(true);
 
@@ -142,7 +144,7 @@ const Contact = () => {
             <div className="formControl">
                 <button onClick={handleSubmit}>Send</button>
             </div>
-            <ContactModal show={showModal} handleClose={handleCloseModal} />
+            <ContactModal show={showModal} handleClose={handleCloseModal} success={responseSuccess} />
         </section>
     );
 }
