@@ -14,8 +14,8 @@ const DynamicPopover = (props) => {
     );
 
     return (
-        <OverlayTrigger trigger="hover" placement={"bottom"} overlay={popover}>
-            <p>Store Hours</p>
+        <OverlayTrigger trigger={props.trigger} placement={props.placement} overlay={popover}>
+            <p className="topbar">{props.title}</p>
         </OverlayTrigger>
     );
 }

@@ -1,7 +1,7 @@
 #topBar {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: end;
     align-items: center;
     background-color: $primary;
     color: $light;
@@ -10,4 +10,8 @@
     height: 30px;
     z-index: 100;
     top: 0;
+
+    div {
+        padding: 0px 20px;
+    }
 }

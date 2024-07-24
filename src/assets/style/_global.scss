@@ -5,6 +5,9 @@ body {
 .light {
     color: $light;
 }
+.dark {
+    color: $dark;
+}
 .attention {
     color: $attention;
 }
@@ -54,6 +57,8 @@ p.topbar {
     font-size: $content;
     padding: 0px;
     margin: 0px;
+    user-select: none;
+    text-decoration: underline;
 }
 p.title {
     font-size: $title-sm;
