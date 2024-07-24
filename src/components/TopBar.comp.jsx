@@ -1,4 +1,17 @@
+import DynamicPopover from "./DynamicPopover.com";
+
 const TopBar = () => {
+
+	//TODO find more efficient place to put store hours
+	const storeHours = (
+		<ul>
+			<li>Mon - Sat: 10am - 6pm</li>
+			<li>Closed Sunday</li>
+			<li>Hours could be affected by holidays</li>
+			<li>Call us +1 385 899 8586</li>
+		</ul>
+	);
+
     return (
 			<div id="topBar">
 				<p>
@@ -10,6 +23,7 @@ const TopBar = () => {
 						35 N 900 E St, Payson, UT 84651
 					</a>
 				</p>
+				<DynamicPopover title="Store Hours" content={storeHours} />
 			</div>
 		);
 }
