@@ -78,6 +78,10 @@ p.productSupport {
     &.outofstock {
         color: $primary;
     }
+    
+    &.comingsoon {
+        color: $attention;
+    }
 }
 button {
     transition: all ease-in-out .2s;
