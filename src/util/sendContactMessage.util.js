@@ -10,7 +10,7 @@ const sendContactRequest = async (data) => {
         };
 
         const response = await fetch(
-            "https://dolphin-app-l73qq.ondigitalocean.app/api/ecomm/sendContactRequest", options
+            "https://ahiporti.com/api/ecomm/sendContactRequest", options
         );
         if (!response.ok) {
             throw new Error("Failed to fetch product data");
