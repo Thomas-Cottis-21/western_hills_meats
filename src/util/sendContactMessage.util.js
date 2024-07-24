@@ -6,7 +6,7 @@ const sendContactRequest = async (data) => {
             headers: {
                 "Content-Type": "application/json"
             },
-            body: data
+            body: JSON.stringify(data)
         };
 
         const response = await fetch(
