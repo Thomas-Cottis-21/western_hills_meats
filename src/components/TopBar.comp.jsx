@@ -27,7 +27,7 @@ const TopBar = () => {
     return (
 			<div id="topBar">
 				<div>
-					<DynamicPopover title="Store Address" content={storeAddress} trigger={"click"} placement={"left"}/>
+					<DynamicPopover title="Store Address" content={storeAddress} trigger={"click"} placement={"bottom"}/>
 				</div>
 				<div>
 					<DynamicPopover title="Store Hours" content={storeHours} trigger={"click"} placement={"bottom"}/>
