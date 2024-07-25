@@ -53,16 +53,20 @@ const App = () => {
     })
   }
 
+  const formatDynamicLink = (string) => {
+	return string => string ? string.toLowerCase().replace(/^\w/, c => c.toUpperCase()) : "";
+  }		
+
   const DynamicSubcategory = () => {
     const { category, subcategory } = useParams();
 
-    return <ProductsSubcategory category={category.toLowerCase().charAt(0).toUpperCase()} subcategory={subcategory.toLowerCase().charAt(0).toUpperCase()} />
+    return <ProductsSubcategory category={formatDynamicLink(category)} subcategory={formatDynamicLink(subcategory)} />
   }
 
   const DynamicCategory = () => {
     const { category } = useParams();
 
-    return <ProductsCategory category={category.toLowerCase().charAt(0).toUpperCase()} />
+    return <ProductsCategory category={formatDynamicLink(category)} />
   }
 
   const pageVariants = {
