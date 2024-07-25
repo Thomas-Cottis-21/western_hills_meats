@@ -4,7 +4,6 @@ import Contact from "../components/Contact.comp.jsx";
 import Hero from "../components/Hero.comp.jsx";
 import MeatHero from "../components/MeatHero.comp.jsx";
 import SmokerHero from "../components/SmokerHero.comp.jsx";
-import Vendor from "../components/Vendor.comp.jsx";
 import Location from "../components/Location.comp.jsx";
 import { Helmet } from "react-helmet";
 
@@ -20,7 +19,6 @@ const Home = () => {
             </Helmet>
             <Hero/>
             <MeatHero/>
-            <Vendor />
             <Location />
             <CondimentHero/>
             <SmokerHero/>
