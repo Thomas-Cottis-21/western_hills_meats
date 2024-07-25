@@ -11,11 +11,8 @@ const Inventory = () => {
 
     return (
         <section>
-            <TopBar />
-            <Navigation />
             <InventoryListingHero data={data}/>
             <ProductGrid data={data} />
-            <Footer />
         </section>
     );
 }

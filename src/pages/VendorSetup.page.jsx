@@ -4,8 +4,6 @@ import Topbar from "../components/TopBar.comp";
 const VendorSetup = () => {
     return (
         <>
-            <Topbar />
-            <Navigation />
             <div id="vendorSetupHero">
                 <h1 className="title light">Elevate Your Menu with Our Premium Meats</h1>
                 <p className="subtitle light">Reliable and High Quality Meat Solutions for Your Business</p>

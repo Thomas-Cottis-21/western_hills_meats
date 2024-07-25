@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes, useParams } from "react-router-dom";
 import Home from "./pages/Home.page";
+import TopBar from "./components/TopBar.comp.jsx";
+import Navigation from "./components/Navigation.comp.jsx";
 import NotFound from "./pages/NotFound.page";
 import getProducts from "./util/getProducts.util.js";
 import { accessData } from "./context/DataContext.context.jsx";
@@ -10,6 +12,7 @@ import Inventory from "./pages/Inventory.page.jsx";
 import getProductImages from "./util/getProductImages.js";
 import VendorSetup from "./pages/VendorSetup.page.jsx";
 import ScrollToTop from "./context/ScrollToTop.context.jsx";
+import Footer from "./components/Footer.comp.jsx";
 
 const App = () => {
   const { data, setData } = accessData();
@@ -61,17 +64,23 @@ const App = () => {
   }
 
   return (
-    <Router>
-      <ScrollToTop />
-      <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/inventory/:category/:subcategory" element={<DynamicSubcategory />} />
-        <Route path="/inventory/:category" element={< DynamicCategory />}/>
-        <Route path="/inventory" element={<Inventory />} />
-        <Route path="*" element={<NotFound />}/>
-        <Route path="/vendor" element={<VendorSetup />} />
-      </Routes>
-    </Router>
+		<Router>
+      <TopBar />
+      <Navigation />
+			<ScrollToTop />
+			<Routes>
+				<Route path="/" element={<Home />} />
+				<Route
+					path="/inventory/:category/:subcategory"
+					element={<DynamicSubcategory />}
+				/>
+				<Route path="/inventory/:category" element={<DynamicCategory />} />
+				<Route path="/inventory" element={<Inventory />} />
+				<Route path="*" element={<NotFound />} />
+				<Route path="/vendor" element={<VendorSetup />} />
+			</Routes>
+      <Footer />
+		</Router>
   );
 }
 

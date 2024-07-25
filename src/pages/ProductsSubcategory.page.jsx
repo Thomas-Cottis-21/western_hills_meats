@@ -12,11 +12,8 @@ const ProductsSubcategory = (props) => {
 
     return (
         <section>
-            <TopBar />
-            <Navigation />
             <ProductListingHero category={props.category} subcategory={props.subcategory} productCount={getProductCountBySubcategory(data, props.subcategory)} />
             <ProductGrid data={getProductsBySubcategory(data, props.subcategory)} />
-            <Footer />
         </section>
     );
 }

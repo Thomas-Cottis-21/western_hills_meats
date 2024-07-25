@@ -14,8 +14,6 @@ const Home = () => {
 
     return (
         <>
-            <TopBar/>
-            <Navigation />
             <Hero/>
             <MeatHero/>
             <Vendor />
@@ -24,7 +22,6 @@ const Home = () => {
             <SmokerHero/>
             <CallToAction/>
             <Contact/>
-            <Footer />
         </>
     );
 }
