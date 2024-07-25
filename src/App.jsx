@@ -14,6 +14,7 @@ import VendorSetup from "./pages/VendorSetup.page.jsx";
 import ScrollToTop from "./context/ScrollToTop.context.jsx";
 import Footer from "./components/Footer.comp.jsx";
 import { AnimatePresence, motion } from "framer-motion";
+import Search from "./pages/Search.page.jsx";
 
 const App = () => {
   const { data, setData } = accessData();
@@ -77,6 +78,18 @@ const App = () => {
 			opacity: 0,
 			x: "100vw",
 		},
+		initialY: {
+			opacity: 0,
+			y: "100%",
+		},
+		inY: {
+			opacity: 1,
+			y: 0,
+		},
+		outY: {
+			opacity: 0,
+			y: "100%",
+		},
   };
 
   const pageTransition = {
@@ -100,6 +113,19 @@ const App = () => {
 								variants={pageVariants}
 								transition={pageTransition}>
 								<Home />
+							</motion.div>
+						}
+					/>
+					<Route 
+						path="/search"
+						element={
+							<motion.div
+							initial="initialY"
+							animate="inY"
+							exit="outY"
+							variants={pageVariants}
+							transition={pageTransition}>
+								<Search />
 							</motion.div>
 						}
 					/>

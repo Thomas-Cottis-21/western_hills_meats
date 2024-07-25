@@ -1,4 +1,5 @@
 import DynamicPopover from "./DynamicPopover.com";
+import { Link } from "react-router-dom";
 
 const TopBar = () => {
 
@@ -31,6 +32,9 @@ const TopBar = () => {
 				</div>
 				<div>
 					<DynamicPopover title="Store Hours" content={storeHours} trigger={"click"} placement={"bottom"}/>
+				</div>
+				<div>
+					<Link to={"/search"}>Search</Link>
 				</div>
 			</div>
 		);
