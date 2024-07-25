@@ -1,8 +1,14 @@
+import { useNavigate } from "react-router-dom";
 import ImageGrid from "./ImageGrid.comp";
 
 const SmokerHero = () => {
 
-	//TODO update this to follow best practice
+	const navigate = useNavigate();
+
+	const handleClick = () => {
+		navigate("/inventory/smokers");
+	}
+
 	const traeger =
 		"https://western-hills-data-space.nyc3.cdn.digitaloceanspaces.com/assets/images/propaganda/logos/traegerLogo.svg";
 	const gozney =
@@ -24,7 +30,7 @@ const SmokerHero = () => {
 
 				<ImageGrid images={imagesArray}/>
 
-				<button>Explore Grills & Smokers</button>
+				<button onClick={handleClick}>Explore Grills & Smokers</button>
 			</section>
 		);
 }
