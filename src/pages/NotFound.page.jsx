@@ -1,3 +1,5 @@
+import { Helmet } from "react-helmet";
+
 const NotFound = () => {
     return (
         <section className="notFound">

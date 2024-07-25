@@ -2,6 +2,7 @@ import { useState } from "react";
 import ProductListingHero from "../components/ProductListingHero.comp";
 import { accessData } from "../context/DataContext.context";
 import ProductGrid from "../components/ProductGrid.comp";
+import { Helmet } from "react-helmet";
 
 const Search = () => {
     const { data, setData } = accessData();

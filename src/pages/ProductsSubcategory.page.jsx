@@ -2,6 +2,7 @@ import ProductGrid from "../components/ProductGrid.comp";
 import ProductListingHero from "../components/ProductListingHero.comp";
 import { accessData } from "../context/DataContext.context";
 import { getProductCountBySubcategory, getProductsBySubcategory } from "../util/filterData.util";
+import { Helmet } from "react-helmet";
 
 const ProductsSubcategory = (props) => {
 
