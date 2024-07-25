@@ -5,17 +5,25 @@ const Breadcrumb = (props) => {
         <>
 			<div className="breadcrumb">
 				<span>
-					{<Link to={"/inventory"}>Inventory</Link>}
-					{props.category && (
+                    {props.category === "search" ? (
                         <>
-                            {" / "}
-                            <Link to={`/inventory/${props.category}`}>{props.category}</Link>
+                            <Link to={"/inventory"}>Inventory</Link> / Search
                         </>
-                    )}
-                    {props.subcategory && (
+                    ) : (
                         <>
-                            {" / "}
-                            {props.subcategory}
+                            <Link to={"/inventory"}>Inventory</Link>
+                            {props.category && (
+                                <>
+                                    {" / "}
+                                    <Link to={`/inventory/${props.category}`}>{props.category}</Link>
+                                </>
+                            )}
+                            {props.subcategory && (
+                                <>
+                                    {" / "}
+                                    {props.subcategory}
+                                </>
+                            )}
                         </>
                     )}
 				</span>

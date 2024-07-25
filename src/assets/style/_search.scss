@@ -1,3 +1,7 @@
 .search {
-    padding: 200px;
+    background-color: $dark;
+
+    .searchControl {
+        padding: 50px;
+    }
 }
