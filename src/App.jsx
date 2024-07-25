@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { BrowserRouter as Router, Route, Routes, useParams } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, useParams, useLocation } from "react-router-dom";
 import Home from "./pages/Home.page";
 import TopBar from "./components/TopBar.comp.jsx";
 import Navigation from "./components/Navigation.comp.jsx";
@@ -13,6 +13,7 @@ import getProductImages from "./util/getProductImages.js";
 import VendorSetup from "./pages/VendorSetup.page.jsx";
 import ScrollToTop from "./context/ScrollToTop.context.jsx";
 import Footer from "./components/Footer.comp.jsx";
+import { AnimatePresence, motion } from "framer-motion";
 
 const App = () => {
   const { data, setData } = accessData();
@@ -63,22 +64,121 @@ const App = () => {
     return <ProductsCategory category={category} />
   }
 
+  const pageVariants = {
+		initial: {
+			opacity: 0,
+			x: "-100vw",
+		},
+		in: {
+			opacity: 1,
+			x: 0,
+		},
+		out: {
+			opacity: 0,
+			x: "100vw",
+		},
+  };
+
+  const pageTransition = {
+		type: "tween"
+  };
+
+  const AnimatedRoutes = () => {
+
+    const location = useLocation();
+
+    return (
+			<AnimatePresence mode="wait" initial={false}>
+				<Routes location={location} key={location.pathname}>
+					<Route
+						path="/"
+						element={
+							<motion.div
+								initial="initial"
+								animate="in"
+								exit="out"
+								variants={pageVariants}
+								transition={pageTransition}>
+								<Home />
+							</motion.div>
+						}
+					/>
+					<Route
+						path="/inventory/:category/:subcategory"
+						element={
+							<motion.div
+								initial="initial"
+								animate="in"
+								exit="out"
+								variants={pageVariants}
+								transition={pageTransition}>
+								<DynamicSubcategory />
+							</motion.div>
+						}
+					/>
+					<Route
+						path="/inventory/:category"
+						element={
+							<motion.div
+								initial="initial"
+								animate="in"
+								exit="out"
+								variants={pageVariants}
+								transition={pageTransition}>
+								<DynamicCategory />
+							</motion.div>
+						}
+					/>
+					<Route
+						path="/inventory"
+						element={
+							<motion.div
+								initial="initial"
+								animate="in"
+								exit="out"
+								variants={pageVariants}
+								transition={pageTransition}>
+								<Inventory />
+							</motion.div>
+						}
+					/>
+					<Route
+						path="*"
+						element={
+							<motion.div
+								initial="initial"
+								animate="in"
+								exit="out"
+								variants={pageVariants}
+								transition={pageTransition}>
+								<NotFound />
+							</motion.div>
+						}
+					/>
+					<Route
+						path="/vendor"
+						element={
+							<motion.div
+								initial="initial"
+								animate="in"
+								exit="out"
+								variants={pageVariants}
+								transition={pageTransition}>
+								<VendorSetup />
+							</motion.div>
+						}
+					/>
+				</Routes>
+			</AnimatePresence>
+		);
+  }
+
   return (
 		<Router>
       <TopBar />
       <Navigation />
 			<ScrollToTop />
-			<Routes>
-				<Route path="/" element={<Home />} />
-				<Route
-					path="/inventory/:category/:subcategory"
-					element={<DynamicSubcategory />}
-				/>
-				<Route path="/inventory/:category" element={<DynamicCategory />} />
-				<Route path="/inventory" element={<Inventory />} />
-				<Route path="*" element={<NotFound />} />
-				<Route path="/vendor" element={<VendorSetup />} />
-			</Routes>
+			<AnimatedRoutes />
       <Footer />
 		</Router>
   );
