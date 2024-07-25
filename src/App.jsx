@@ -51,22 +51,18 @@ const App = () => {
         images: imageMap[product.cloverId] || []
       }
     })
-  }
-
-  const formatDynamicLink = (string) => {
-	return string => string ? string.toLowerCase().replace(/^\w/, c => c.toUpperCase()) : "";
-  }		
+  }	
 
   const DynamicSubcategory = () => {
     const { category, subcategory } = useParams();
 
-    return <ProductsSubcategory category={formatDynamicLink(category)} subcategory={formatDynamicLink(subcategory)} />
+    return <ProductsSubcategory category={category} subcategory={subcategory} />
   }
 
   const DynamicCategory = () => {
     const { category } = useParams();
 
-    return <ProductsCategory category={formatDynamicLink(category)} />
+    return <ProductsCategory category={category} />
   }
 
   const pageVariants = {
