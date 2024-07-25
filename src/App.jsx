@@ -53,16 +53,23 @@ const App = () => {
     })
   }	
 
+  const formatParameters = (string) => {
+	if (!string) return "";
+
+	const lowerString = string.toLowerCase();
+	return lowerString.charAt(0).toUpperCase() + lowerString.slice(1);
+  }
+
   const DynamicSubcategory = () => {
     const { category, subcategory } = useParams();
 
-    return <ProductsSubcategory category={category} subcategory={subcategory} />
+    return <ProductsSubcategory category={formatParameters(category)} subcategory={formatParameters(subcategory)} />
   }
 
   const DynamicCategory = () => {
     const { category } = useParams();
 
-    return <ProductsCategory category={category} />
+    return <ProductsCategory category={formatParameters(category)} />
   }
 
   const pageVariants = {
