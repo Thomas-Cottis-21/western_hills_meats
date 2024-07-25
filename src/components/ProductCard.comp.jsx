@@ -47,7 +47,6 @@ const ProductCard = ({ product, index }) => {
 							)}`}>
 							{product.quantityTypeName}
 						</p>
-						<p className="productSupport">{product.brandName}</p>
 					</div>
 				</div>
 			)}
