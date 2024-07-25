@@ -114,7 +114,8 @@ const Navigation = () => {
 			id="navbar"
 			style={{ backdropFilter: backdropFilter }}>
 			<NavbarBrand>
-				<Link to={"/"}>
+				<Link to={"/"}
+					onClick={handleSelect}>
 					<img
 						src="https://western-hills-data-space.nyc3.cdn.digitaloceanspaces.com/assets/images/propaganda/logos/western_hills_logo.svg"
 						width="140"
@@ -159,6 +160,9 @@ const Navigation = () => {
 							"All Smoker & Grill Inventory"
 						)}
 					</NavDropdown>
+					<Nav.Link as={Link} onClick={handleSelect} className="nav-link" to={"/search"}>
+						Search Inventory
+					</Nav.Link>
 				</Nav>
 				<NavbarText>
 					<p>
