@@ -27,18 +27,41 @@ const Search = () => {
     }
 
     return (
-        <section className="search">
-            <ProductListingHero category={"search"} subcategory={null} productCount={filteredData.length}/>
-            <div className="searchControl">
-                <input 
-                name="search"
-                value={value}
-                onChange={handleChange}
-                placeholder="Search Inventory"/>
-            </div>
-            <ProductGrid data={filteredData} />
-        </section>
-    );
+			<section className="search">
+				<Helmet>
+					<title>Search: 
+						{value} (
+						{filteredData.length})
+					</title>
+					<meta
+						name="description"
+						content="We have a vast inventory of smokers, grills, condiments and meats! Be sure to visit us soon!"
+					/>
+					<meta
+						name="keywords"
+						content="meat, meats, beef, pork, chicken, lamb, turkey, seafood, condiments, rubs, sauces, marinades, accessories, thermometers, pellets, grills, smokers"
+					/>
+					<link
+						rel="canonical"
+						href={`https://www.westernhillsmeats.com/inventory/search`}
+					/>
+				</Helmet>
+				<ProductListingHero
+					category={"search"}
+					subcategory={null}
+					productCount={filteredData.length}
+				/>
+				<div className="searchControl">
+					<input
+						name="search"
+						value={value}
+						onChange={handleChange}
+						placeholder="Search Inventory"
+					/>
+				</div>
+				<ProductGrid data={filteredData} />
+			</section>
+		);
 }
 
 export default Search;

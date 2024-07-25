@@ -16,7 +16,7 @@ const Home = () => {
                 <title>Home</title>
                 <meta name="description" content="Visit us in Payson, Utah! We supply the best meats, rubs, grills and smokers in town!"/>
                 <meta name="keywords" content="meat, meats, beef, pork, chicken, lamb, turkey, seafood, condiments, rubs, sauces, marinades, accessories, thermometers, pellets, grills, smokers"/>
-                <link rel="canonical" href="https://www.ahiporti.com/"/>
+                <link rel="canonical" href="https://www.westernhillsmeats.com/"/>
             </Helmet>
             <Hero/>
             <MeatHero/>
