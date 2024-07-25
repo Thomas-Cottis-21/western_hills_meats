@@ -56,13 +56,13 @@ const App = () => {
   const DynamicSubcategory = () => {
     const { category, subcategory } = useParams();
 
-    return <ProductsSubcategory category={category} subcategory={subcategory} />
+    return <ProductsSubcategory category={category.toLowerCase().charAt(0).toUpperCase()} subcategory={subcategory.toLowerCase().charAt(0).toUpperCase()} />
   }
 
   const DynamicCategory = () => {
     const { category } = useParams();
 
-    return <ProductsCategory category={category} />
+    return <ProductsCategory category={category.toLowerCase().charAt(0).toUpperCase()} />
   }
 
   const pageVariants = {

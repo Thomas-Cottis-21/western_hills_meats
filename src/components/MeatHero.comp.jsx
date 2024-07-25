@@ -5,7 +5,7 @@ const MeatHero = () => {
 	const navigate = useNavigate();
 
 	const handleClick = () => {
-		navigate("/inventory/meats");
+		navigate("/inventory/Meats");
 	}
 
     return (
