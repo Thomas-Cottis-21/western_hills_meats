@@ -56,7 +56,7 @@ const Navigation = () => {
 
 	const calculateBlurEffect = () => {
 		const newValue = scrollY / 8;
-		setEffectValue(Math.trunc(newValue + 2));
+		setEffectValue(Math.trunc(newValue + 3));
 	};
 
 	useEffect(() => {
