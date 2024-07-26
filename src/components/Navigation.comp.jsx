@@ -15,13 +15,15 @@ import {
 	getProductCountByCategory,
 	getProductCountBySubcategory,
 } from "../util/filterData.util";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Navigation = () => {
 	const [scrollY, setScrollY] = useState(0);
 	const [effectValue, setEffectValue] = useState(0);
 	const [backdropFilter, setBackdropFilter] = useState("");
 	const navbarRef = useRef(null);
+
+	const navigate = useNavigate();
 
 	const { data, setData } = accessData();
 
@@ -43,6 +45,10 @@ const Navigation = () => {
 		const currentScrollY = window.scrollY;
 		setScrollY(Math.trunc(currentScrollY));
 	};
+
+	const handleSearchClick = () => {
+		navigate("/search");
+	}
 
 	useEffect(() => {
 		calculateBlurEffect();
@@ -114,8 +120,7 @@ const Navigation = () => {
 			id="navbar"
 			style={{ backdropFilter: backdropFilter }}>
 			<NavbarBrand>
-				<Link to={"/"}
-					onClick={handleSelect}>
+				<Link to={"/"} onClick={handleSelect}>
 					<img
 						src="https://western-hills-data-space.nyc3.cdn.digitaloceanspaces.com/assets/images/propaganda/logos/western_hills_logo.svg"
 						width="140"
@@ -123,8 +128,15 @@ const Navigation = () => {
 					/>
 				</Link>
 			</NavbarBrand>
-			<NavbarToggle aria-controls="basic-navbar-nav"
-			onClick={() => setIsExpanded(!isExpanded)} />
+			<div className="navbarControls">
+				<NavbarToggle
+					aria-controls="basic-navbar-nav"
+					onClick={() => setIsExpanded(!isExpanded)}
+				/>
+				<img src="https://western-hills-data-space.nyc3.cdn.digitaloceanspaces.com/assets/images/propaganda/icons/search_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" 
+				alt="search-icon"
+				onClick={handleSearchClick}/>
+			</div>
 			<NavbarCollapse id="basic-navbar-nav">
 				<Nav className="ml-auto">
 					{formatHomeLink()}
@@ -160,7 +172,11 @@ const Navigation = () => {
 							"All Smoker & Grill Inventory"
 						)}
 					</NavDropdown>
-					<Nav.Link as={Link} onClick={handleSelect} className="nav-link" to={"/search"}>
+					<Nav.Link
+						as={Link}
+						onClick={handleSelect}
+						className="nav-link"
+						to={"/search"}>
 						Search Inventory
 					</Nav.Link>
 				</Nav>

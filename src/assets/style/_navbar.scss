@@ -9,4 +9,18 @@
     .navbar-brand, .nav-link {
         color: $light;
     }
+
+    .navbarControls {
+        display: flex;
+        flex-direction: row-reverse;
+        padding: 0px 20px;
+        
+        img {
+            padding: 0px 10px;
+            width: 3.5rem;
+        }
+        img:hover {
+            cursor: pointer;
+        }
+    }
 }

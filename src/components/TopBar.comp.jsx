@@ -33,9 +33,6 @@ const TopBar = () => {
 				<div>
 					<DynamicPopover title="Store Hours" content={storeHours} trigger={"click"} placement={"bottom"}/>
 				</div>
-				<div>
-					<Link to={"/search"}>Search</Link>
-				</div>
 			</div>
 		);
 }

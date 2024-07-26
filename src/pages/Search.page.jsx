@@ -30,7 +30,7 @@ const Search = () => {
     return (
 			<section className="search">
 				<Helmet>
-					<title>Search: {" "} {value} ({filteredData.length})</title>
+					<title>{`Search: ${value} (${filteredData.length})`}</title>
 					<meta
 						name="description"
 						content="We have a vast inventory of smokers, grills, condiments and meats! Be sure to visit us soon!"
