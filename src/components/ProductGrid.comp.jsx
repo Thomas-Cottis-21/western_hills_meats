@@ -19,15 +19,15 @@ const ProductGrid = (props) => {
 								35 N 900 E St, Payson, UT 84651
 							</a>
 						</p>
-                        <h2>Store Hours</h2>
-						<p className="subtitle">
+						<h2>Store Hours</h2>
+						<div>
 							<ul>
 								<li>Mon - Sat: 10am - 6pm</li>
 								<li>Closed Sunday</li>
 								<li>Hours could be affected by holidays</li>
 								<li>Call us +1 385 899 8586</li>
 							</ul>
-						</p>
+						</div>
 					</div>
 				)}
 			</div>

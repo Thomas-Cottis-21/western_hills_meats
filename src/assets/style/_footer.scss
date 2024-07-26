@@ -25,10 +25,6 @@
                     font-size: $footer;
                     font-family: $content;
                 }
-    
-                a:hover {
-                    color: $attention;
-                }
             }
         }
         .footerSupportContainer {
@@ -36,10 +32,6 @@
             flex-direction: column;
             align-items: safe;
             padding: 15px;
-
-            a:hover {
-                color: $attention;
-            }
         }
     }
 }
