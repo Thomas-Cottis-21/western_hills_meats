@@ -118,7 +118,9 @@ const Navigation = () => {
 			data-bs-theme="dark"
 			fixed="top"
 			id="navbar"
-			style={{ backdropFilter: backdropFilter }}>
+			style={{ WebkitBackdropFilter: backdropFilter,
+				backdropFilter: backdropFilter
+			 }}>
 			<NavbarBrand>
 				<Link to={"/"} onClick={handleSelect}>
 					<img
