@@ -13,11 +13,13 @@ const Search = () => {
         const searchValue = event.target.value.toLowerCase();
         setValue(searchValue);
 
+		const formattedValue = searchValue.trim();
+
         const newFilteredData = data.filter(product =>
-            product.name.toLowerCase().includes(searchValue) || 
-            product.description.toLowerCase().includes(searchValue) || 
-            product.categoryName.toLowerCase().includes(searchValue) || 
-            product.subcategoryName.toLowerCase().includes(searchValue)
+            product.name.toLowerCase().includes(formattedValue) || 
+            product.description.toLowerCase().includes(formattedValue) || 
+            product.categoryName.toLowerCase().includes(formattedValue) || 
+            product.subcategoryName.toLowerCase().includes(formattedValue)
         );
 
         if (!searchValue) {
