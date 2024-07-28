@@ -60,16 +60,30 @@ const Contact = () => {
     }
 
     const handleContactRequest = async () => {
-        const contactResponse = await sendContactRequest(values);
+        try {
+            const contactResponse = await sendContactRequest(values);
+            setResponseSuccess(contactResponse.success);
+            handleShowModal();
 
-        console.log(contactResponse);
-        setResponseSuccess(contactResponse.success);
-        handleShowModal();
+            if (!contactResponse.success) {
+                setValues((prevValues) => {
+                    const newValues = { ...prevValues };
+                    Object.keys(newValues).forEach((key) => {
+                        newValues[key] = "";
+                    });
+                    return newValues;
+                });
+            }
+        } catch (error) {
+            setResponseSuccess(false);
+            handleShowModal();
+        } finally {
+            setLoading(false);
+        }
     }
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-
         setLoading(true);
 
         setTouched({
@@ -142,7 +156,13 @@ const Contact = () => {
 
             </form>
             <div className="formControl">
-                <button onClick={handleSubmit}>Send</button>
+                {
+                    loading ? (
+                        <button disabled>Sending</button>
+                    ) : (
+                        <button onClick={handleSubmit}>Send</button>
+                    )
+                }
             </div>
             <ContactModal show={showModal} handleClose={handleCloseModal} success={responseSuccess} />
         </section>
