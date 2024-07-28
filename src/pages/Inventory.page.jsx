@@ -10,7 +10,7 @@ const Inventory = () => {
     return (
 			<section>
 				<Helmet>
-					<title>Inventory ({data.length})</title>
+					<title>{`Inventory (${data.length})`}</title>
 					<meta
 						name="description"
 						content="We have a vast inventory of smokers, grills, condiments and meats! Be sure to visit us soon!"

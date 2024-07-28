@@ -12,8 +12,8 @@ const ProductsCategory = (props) => {
 			<section>
 				<Helmet>
 					<title>
-						{props.category} (
-						{getProductCountByCategory(data, props.category)})
+						{`${props.category} (
+						${getProductCountByCategory(data, props.category)})`}
 					</title>
 					<meta
 						name="description"

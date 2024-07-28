@@ -12,8 +12,7 @@ const ProductsSubcategory = (props) => {
 			<section>
 				<Helmet>
 					<title>
-						{props.subcategory} (
-						{getProductCountBySubcategory(data, props.subcategory)})
+						{`${props.subcategory} (${getProductCountBySubcategory(data, props.subcategory)})`}
 					</title>
 					<meta
 						name="description"

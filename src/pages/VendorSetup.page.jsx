@@ -1,6 +1,3 @@
-import Navigation from "../components/Navigation.comp";
-import Topbar from "../components/TopBar.comp";
-
 const VendorSetup = () => {
     return (
         <>
