@@ -14,12 +14,12 @@ const ProductCard = ({ product, index }) => {
 								{product.brandName} - {product.categoryName} /{" "}
 								{product.subcategoryName}
 							</p>
-							<p
-								className={`productSupport ${formatStockClass(
-									product.quantityTypeName
-								)}`}>
-								{product.quantityTypeName}
-							</p>
+							{/*<p*/}
+							{/*	className={`productSupport ${formatStockClass(*/}
+							{/*		product.quantityTypeName*/}
+							{/*	)}`}>*/}
+							{/*	{product.quantityTypeName}*/}
+							{/*</p>*/}
 						</div>
 						<div className="right light">
 							<p className="productSupport">
@@ -41,12 +41,12 @@ const ProductCard = ({ product, index }) => {
 						<p className="productSupport">
 							{product.categoryName} / {product.subcategoryName}
 						</p>
-						<p
-							className={`productSupport ${formatStockClass(
-								product.quantityTypeName
-							)}`}>
-							{product.quantityTypeName}
-						</p>
+						{/*<p*/}
+						{/*	className={`productSupport ${formatStockClass(*/}
+						{/*		product.quantityTypeName*/}
+						{/*	)}`}>*/}
+						{/*	{product.quantityTypeName}*/}
+						{/*</p>*/}
 					</div>
 				</div>
 			)}
